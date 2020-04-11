@@ -34,6 +34,12 @@ class LugaresTableViewController: UITableViewController {
         cell.textLabel?.font = letra
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let mapaLugar = segue.destination as! DetallesLugarViewController
+       let indice = tableView.indexPathForSelectedRow!
+        mapaLugar.lugar = arrLugares[indice.row]
+    }
 
     /*
     // Override to support conditional editing of the table view.
