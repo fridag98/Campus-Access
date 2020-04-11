@@ -9,25 +9,31 @@
 import UIKit
 
 class LugaresTableViewController: UITableViewController {
+    
+    var categoriaSeleccionada : String!
+    var arrLugares = [Lugares]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //cambiar nombre del botón de navegación a "Regresar"
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Regresar", style: .plain, target: nil, action: nil)
-        let data = DataLoader(arch:"Edificios").lugaresData
-        print(data)
+        //cargar datos del json al arreglo. Lo hace la clase DataLoader que se creó
+        arrLugares = DataLoader(arch:categoriaSeleccionada).lugaresData
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return arrLugares.count
     }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "lugarCell", for: indexPath)
-        cell.textLabel?.text = ""
+        cell.textLabel?.text = arrLugares[indexPath.row].nombre
+        let letra = UIFont(name: "Arial Rounded MT Bold", size: 20)
+        cell.textLabel?.font = letra
         return cell
     }
-
 
     /*
     // Override to support conditional editing of the table view.

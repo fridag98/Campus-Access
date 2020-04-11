@@ -28,6 +28,7 @@ class CategoriasViewController: UIViewController, UITableViewDelegate, UITableVi
         let region = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
         mapaTec.setRegion(region, animated: true)
         
+        //cambiar nombre del botón de navegación a "Regresar"
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Regresar", style: .plain, target: nil, action: nil)
     }
     
@@ -44,6 +45,12 @@ class CategoriasViewController: UIViewController, UITableViewDelegate, UITableVi
         celda.textLabel?.font = letra
         return celda
      }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vistaLugares = segue.destination as! LugaresTableViewController
+        let indice = categoryTableView.indexPathForSelectedRow!
+        vistaLugares.categoriaSeleccionada = categorias[indice.row]
+    }
     
     
 }

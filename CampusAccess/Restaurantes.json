@@ -1,54 +1,54 @@
 [{
    "nombre" : "Nectarworks",
-   "latitude" : ,
-   "longitude" : ,
-   "description" : ""
+   "latitude" : 55.5,
+   "longitude" : 55.5,
+   "description" : "descripcion"
  },
  {
    "nombre" : "Señor Latino",
-   "latitude" : ,
-   "longitude" : ,
-   "description" : ""
+   "latitude" : 55.5,
+   "longitude" : 55.5,
+   "description" : "descripcion"
  },
  {
    "nombre" : "Doña Tota",
-   "latitude" : ,
-   "longitude" : ,
-   "description" : ""
+   "latitude" : 55.5,
+   "longitude" : 55.5,
+   "description" : "descripcion"
  },
  {
    "nombre" : "Tim Hortons",
-   "latitude" : ,
-   "longitude" : ,
-   "description" : ""
+   "latitude" : 55.5,
+   "longitude" : 55.5,
+   "description" : "descripcion"
  },
  {
    "nombre" : "Johnny Rockets",
-   "latitude" : ,
-   "longitude" : ,
-   "description" : ""
+   "latitude" : 55.5,
+   "longitude" : 55.5,
+   "description" : "descripcion"
  },
  {
   "nombre" : "Subway",
-  "latitude" : ,
-  "longitude" : ,
-  "description" : ""
+  "latitude" : 55.5,
+  "longitude" : 55.5,
+  "description" : "descripcion"
 },
  {
    "nombre" : "Starbucks",
-   "latitude" : ,
-   "longitude" : ,
-   "description" : ""
+   "latitude" : 55.5,
+   "longitude" : 55.5,
+   "description" : "descripcion"
  },
  {
    "nombre" : "Papa Johns",
-   "latitude" : ,
-   "longitude" : ,
-   "description" : ""
+   "latitude" : 55.5,
+   "longitude" : 55.5,
+   "description" : "descripcion"
  },
  {
    "nombre" : "Chilaquiles Tec",
-   "latitude" : ,
-   "longitude" : ,
-   "description" : ""
+   "latitude" : 55.5,
+   "longitude" : 55.5,
+   "description" : "descripcion"
  }]
