@@ -44,4 +44,6 @@ class CategoriasViewController: UIViewController, UITableViewDelegate, UITableVi
         celda.textLabel?.font = letra
         return celda
      }
+    
+    
 }

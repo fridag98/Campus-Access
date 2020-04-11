@@ -13,6 +13,8 @@ class LugaresTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Regresar", style: .plain, target: nil, action: nil)
+        let data = DataLoader(arch:"Edificios").lugaresData
+        print(data)
     }
 
     // MARK: - Table view data source

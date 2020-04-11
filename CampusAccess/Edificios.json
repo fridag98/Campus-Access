@@ -1,66 +1,66 @@
 [{
    "nombre" : "Aulas 1",
-   "latitude" : ,
-   "longitude" : ,
-   "description" : ""
+   "latitude" : 55.5,
+   "longitude" : 55.5,
+   "description" : "descripcion"
  },
  {
    "nombre" : "Aulas 2",
-   "latitude" : ,
-   "longitude" : ,
-   "description" : ""
+   "latitude" : 55.5,
+   "longitude" : 55.5,
+   "description" : "descripcion"
  },
  {
    "nombre" : "Aulas 3",
-   "latitude" : ,
-   "longitude" : ,
-   "description" : ""
+   "latitude" : 55.5,
+   "longitude" : 55.5,
+   "description" : "descripcion"
  },
  {
    "nombre" : "Aulas 4",
-   "latitude" : ,
-   "longitude" : ,
-   "description" : ""
+   "latitude" : 55.5,
+   "longitude" : 55.5,
+   "description" : "descripcion"
  },
  {
    "nombre" : "Centro de Biotecnología",
-   "latitude" : ,
-   "longitude" : ,
-   "description" : ""
+   "latitude" : 55.5,
+   "longitude" : 55.5,
+   "description" : "descripcion"
  },
  {
   "nombre" : "Aulas 6",
-  "latitude" : ,
-  "longitude" : ,
-  "description" : ""
+  "latitude" : 55.5,
+  "longitude" : 55.5,
+  "description" : "descripcion"
 },
  {
    "nombre" : "Aulas 7",
-   "latitude" : ,
-   "longitude" : ,
-   "description" : ""
+   "latitude" : 55.5,
+   "longitude" : 55.5,
+   "description" : "descripcion"
  },
  {
    "nombre" : "CETEC Torre Sur",
-   "latitude" : ,
-   "longitude" : ,
-   "description" : ""
+   "latitude" : 55.5,
+   "longitude" : 55.5,
+   "description" : "descripcion"
  },
  {
    "nombre" : "CETEC Torre Norte",
-   "latitude" : ,
-   "longitude" : ,
-   "description" : ""
+   "latitude" : 55.5,
+   "longitude" : 55.5,
+   "description" : "descripcion"
  },
  {
    "nombre" : "Punto Azul",
-   "latitude" : ,
-   "longitude" : ,
-   "description" : ""
+   "latitude" : 55.5,
+   "longitude" : 55.5,
+   "description" : "descripcion"
  },
  {
    "nombre" : "CEDES",
-   "latitude" : ,
-   "longitude" : ,
-   "description" : ""
+   "latitude" : 55.5,
+   "longitude" : 55.5,
+   "description" : "descripcion"
  }]

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D6B308B624412244009D4971 /* Edificios.json in Resources */ = {isa = PBXBuildFile; fileRef = D6B308B524412244009D4971 /* Edificios.json */; };
+		D6B308BA24413DD5009D4971 /* Restaurantes.json in Resources */ = {isa = PBXBuildFile; fileRef = D6B308B924413DD5009D4971 /* Restaurantes.json */; };
+		D6B308BC24413E5C009D4971 /* Lugares.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B308BB24413E5C009D4971 /* Lugares.swift */; };
+		D6B308BE24413F3A009D4971 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B308BD24413F3A009D4971 /* DataLoader.swift */; };
 		D6C919E52440023E006E3B1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C919E42440023E006E3B1E /* AppDelegate.swift */; };
 		D6C919E72440023E006E3B1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C919E62440023E006E3B1E /* SceneDelegate.swift */; };
 		D6C919E92440023E006E3B1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C919E82440023E006E3B1E /* ViewController.swift */; };
@@ -16,11 +19,13 @@
 		D6C919F124400240006E3B1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6C919EF24400240006E3B1E /* LaunchScreen.storyboard */; };
 		D6C919F924400305006E3B1E /* LugaresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C919F824400305006E3B1E /* LugaresTableViewController.swift */; };
 		D6C919FB244005BB006E3B1E /* CategoriasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C919FA244005BB006E3B1E /* CategoriasViewController.swift */; };
-		D6C919FF2440133E006E3B1E /* restaurantes.json in Resources */ = {isa = PBXBuildFile; fileRef = D6C919FE2440133E006E3B1E /* restaurantes.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D6B308B524412244009D4971 /* Edificios.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Edificios.json; sourceTree = "<group>"; };
+		D6B308B924413DD5009D4971 /* Restaurantes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Restaurantes.json; sourceTree = "<group>"; };
+		D6B308BB24413E5C009D4971 /* Lugares.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lugares.swift; sourceTree = "<group>"; };
+		D6B308BD24413F3A009D4971 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		D6C919E12440023E006E3B1E /* CampusAccess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusAccess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C919E42440023E006E3B1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6C919E62440023E006E3B1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +36,6 @@
 		D6C919F224400240006E3B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6C919F824400305006E3B1E /* LugaresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LugaresTableViewController.swift; sourceTree = "<group>"; };
 		D6C919FA244005BB006E3B1E /* CategoriasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriasViewController.swift; sourceTree = "<group>"; };
-		D6C919FE2440133E006E3B1E /* restaurantes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = restaurantes.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,13 +72,15 @@
 				D6C919E62440023E006E3B1E /* SceneDelegate.swift */,
 				D6C919E82440023E006E3B1E /* ViewController.swift */,
 				D6C919EA2440023E006E3B1E /* Main.storyboard */,
+				D6B308BB24413E5C009D4971 /* Lugares.swift */,
+				D6B308BD24413F3A009D4971 /* DataLoader.swift */,
 				D6C919FA244005BB006E3B1E /* CategoriasViewController.swift */,
 				D6C919F824400305006E3B1E /* LugaresTableViewController.swift */,
 				D6C919ED24400240006E3B1E /* Assets.xcassets */,
 				D6C919EF24400240006E3B1E /* LaunchScreen.storyboard */,
 				D6C919F224400240006E3B1E /* Info.plist */,
+				D6B308B924413DD5009D4971 /* Restaurantes.json */,
 				D6B308B524412244009D4971 /* Edificios.json */,
-				D6C919FE2440133E006E3B1E /* restaurantes.json */,
 			);
 			path = CampusAccess;
 			sourceTree = "<group>";
@@ -140,7 +146,7 @@
 				D6C919F124400240006E3B1E /* LaunchScreen.storyboard in Resources */,
 				D6C919EE24400240006E3B1E /* Assets.xcassets in Resources */,
 				D6B308B624412244009D4971 /* Edificios.json in Resources */,
-				D6C919FF2440133E006E3B1E /* restaurantes.json in Resources */,
+				D6B308BA24413DD5009D4971 /* Restaurantes.json in Resources */,
 				D6C919EC2440023E006E3B1E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +159,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6C919E92440023E006E3B1E /* ViewController.swift in Sources */,
+				D6B308BC24413E5C009D4971 /* Lugares.swift in Sources */,
+				D6B308BE24413F3A009D4971 /* DataLoader.swift in Sources */,
 				D6C919E52440023E006E3B1E /* AppDelegate.swift in Sources */,
 				D6C919F924400305006E3B1E /* LugaresTableViewController.swift in Sources */,
 				D6C919E72440023E006E3B1E /* SceneDelegate.swift in Sources */,
