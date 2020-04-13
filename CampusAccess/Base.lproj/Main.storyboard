@@ -110,11 +110,17 @@
                             <outlet property="delegate" destination="7nX-XF-9yS" id="GFC-Ho-Ci8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="nSB-NU-FOY"/>
+                    <navigationItem key="navigationItem" id="nSB-NU-FOY">
+                        <barButtonItem key="leftBarButtonItem" title="Regresar" id="df2-2J-Ui8">
+                            <connections>
+                                <action selector="btRegresar:" destination="7nX-XF-9yS" id="ScE-4m-9IL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIo-nv-yB0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1503" y="92"/>
+            <point key="canvasLocation" x="1422" y="92"/>
         </scene>
         <!--Categorias View Controller-->
         <scene sceneID="lbg-No-eQ5">
@@ -142,7 +148,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="7nX-XF-9yS" kind="show" identifier="categoriaSegue" id="twC-30-NEx"/>
+                                            <segue destination="IcL-s5-ty2" kind="presentation" identifier="categoriaSegue" modalPresentationStyle="fullScreen" id="sbK-il-IxZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -172,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NNq-sl-ZQy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="556.52173913043487" y="91.071428571428569"/>
+            <point key="canvasLocation" x="-535" y="91"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0ww-N1-Vun">
@@ -190,7 +196,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RwK-bx-4tt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="559" y="-631"/>
+            <point key="canvasLocation" x="416" y="90"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3bw-8D-cya">
@@ -208,10 +214,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Yb-m9-byP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-328" y="92"/>
+            <point key="canvasLocation" x="-1429" y="92"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="twC-30-NEx"/>
-    </inferredMetricsTieBreakers>
 </document>
