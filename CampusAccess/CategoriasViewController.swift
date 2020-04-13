@@ -14,13 +14,13 @@ class CategoriasViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var mapaTec: MKMapView!
     @IBOutlet weak var categoryTableView: UITableView!
     
-    let categorias = ["Edificios","Restaurantes","Cafeterías","Zonas Comunes","Baños","Enfermería","Estacionamiento","Accesos"]
+    let categorias = ["Edificios","Restaurantes","Cafeterías","Zonas Comunes","Deportes","Baños","Estacionamientos","Accesos","Otros"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let annotation = MKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2D(latitude: 25.651594, longitude: -100.289555)
+        annotation.coordinate = CLLocationCoordinate2D(latitude: 25.651022, longitude: -100.289712)
         annotation.title = "TEC"
         annotation.subtitle = "Tecnológico de Monterrey"
         mapaTec.addAnnotation(annotation)

@@ -1,66 +1,85 @@
-[{
+[
+{
+  "nombre" : "Rectoria",
+  "latitude" : 25.651470,
+  "longitude" : -100.291025,
+  "description" : "Rectoría del Tecnológico de Monterrey"
+},
+{
    "nombre" : "Aulas 1",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
-   "description" : "descripcion"
+   "latitude" : 25.651806,
+   "longitude" : -100.290234,
+   "description" : "Aulas 1 del Campus Monterrey"
  },
- {
+{
    "nombre" : "Aulas 2",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
-   "description" : "descripcion"
+   "latitude" : 25.651118,
+   "longitude" : -100.290226,
+   "description" : "Aulas 2 del Campus Monterrey"
  },
  {
    "nombre" : "Aulas 3",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
-   "description" : "descripcion"
+   "latitude" : 25.650024,
+   "longitude" : -100.290233,
+   "description" : "Aulas 3 del Campus Monterrey"
  },
  {
    "nombre" : "Aulas 4",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
-   "description" : "descripcion"
- },
- {
-   "nombre" : "Centro de Biotecnología",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
-   "description" : "descripcion"
+   "latitude" : 25.650087,
+   "longitude" : -100.289290,
+   "description" : "Aulas 4 del Campus Monterrey"
  },
  {
   "nombre" : "Aulas 6",
-  "latitude" : 55.5,
-  "longitude" : 55.5,
-  "description" : "descripcion"
+  "latitude" : 25.651592,
+  "longitude" : -100.288132,
+  "description" : "Aulas 6 del Campus monterrey"
 },
  {
    "nombre" : "Aulas 7",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
-   "description" : "descripcion"
+   "latitude" : 25.650027,
+   "longitude" : -100.288531,
+   "description" : "Aulas 7 del Campus Monterrey"
+ },
+ {
+   "nombre" : "CIAP",
+   "latitude" : 25.652879,
+   "longitude" : -100.289778,
+   "description" : "Centro Internacional de Aprendizaje Avanzado"
+ },
+ {
+   "nombre" : "Centro de Biotecnología",
+   "latitude" : 25.652512,
+   "longitude" : -100.289703,
+   "description" : "Centro Innovador de Biotecnología"
+ },
+ {
+   "nombre" : "ATLI",
+   "latitude" : 25.651798,
+   "longitude" : -100.288799,
+   "description" : "Escuela de Arte"
  },
  {
    "nombre" : "CETEC Torre Sur",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
+   "latitude" : 25.650395,
+   "longitude" : -100.290978,
    "description" : "descripcion"
  },
  {
    "nombre" : "CETEC Torre Norte",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
+   "latitude" : 25.650459,
+   "longitude" : -100.290952,
    "description" : "descripcion"
  },
  {
-   "nombre" : "Punto Azul",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
-   "description" : "descripcion"
+   "nombre" : "Arizona",
+   "latitude" : 25.653123,
+   "longitude" : -100.288845,
+   "description" : "Facultad de Arquitectura ITESM"
  },
  {
    "nombre" : "CEDES",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
-   "description" : "descripcion"
+   "latitude" : 25.653603,
+   "longitude" : -100.292014,
+   "description" : "Centro de Estudios para el Desarrollo Sostenible"
  }]

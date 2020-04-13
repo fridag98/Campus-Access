@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D69F0CC62443B24E00498E34 /* Otros.json in Resources */ = {isa = PBXBuildFile; fileRef = D69F0CC52443B24E00498E34 /* Otros.json */; };
+		D69F0CC82443B2D900498E34 /* Deportes.json in Resources */ = {isa = PBXBuildFile; fileRef = D69F0CC72443B2D900498E34 /* Deportes.json */; };
+		D69F0CCA2443B31800498E34 /* Zonas Comunes.json in Resources */ = {isa = PBXBuildFile; fileRef = D69F0CC92443B31800498E34 /* Zonas Comunes.json */; };
 		D6B308B624412244009D4971 /* Edificios.json in Resources */ = {isa = PBXBuildFile; fileRef = D6B308B524412244009D4971 /* Edificios.json */; };
 		D6B308BA24413DD5009D4971 /* Restaurantes.json in Resources */ = {isa = PBXBuildFile; fileRef = D6B308B924413DD5009D4971 /* Restaurantes.json */; };
 		D6B308BC24413E5C009D4971 /* Lugares.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B308BB24413E5C009D4971 /* Lugares.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D69F0CC52443B24E00498E34 /* Otros.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Otros.json; sourceTree = "<group>"; };
+		D69F0CC72443B2D900498E34 /* Deportes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Deportes.json; sourceTree = "<group>"; };
+		D69F0CC92443B31800498E34 /* Zonas Comunes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Zonas Comunes.json"; sourceTree = "<group>"; };
 		D6B308B524412244009D4971 /* Edificios.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Edificios.json; sourceTree = "<group>"; };
 		D6B308B924413DD5009D4971 /* Restaurantes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Restaurantes.json; sourceTree = "<group>"; };
 		D6B308BB24413E5C009D4971 /* Lugares.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lugares.swift; sourceTree = "<group>"; };
@@ -82,8 +88,11 @@
 				D6C919ED24400240006E3B1E /* Assets.xcassets */,
 				D6C919EF24400240006E3B1E /* LaunchScreen.storyboard */,
 				D6C919F224400240006E3B1E /* Info.plist */,
-				D6B308B924413DD5009D4971 /* Restaurantes.json */,
 				D6B308B524412244009D4971 /* Edificios.json */,
+				D6B308B924413DD5009D4971 /* Restaurantes.json */,
+				D69F0CC72443B2D900498E34 /* Deportes.json */,
+				D69F0CC92443B31800498E34 /* Zonas Comunes.json */,
+				D69F0CC52443B24E00498E34 /* Otros.json */,
 			);
 			path = CampusAccess;
 			sourceTree = "<group>";
@@ -148,9 +157,12 @@
 			files = (
 				D6C919F124400240006E3B1E /* LaunchScreen.storyboard in Resources */,
 				D6C919EE24400240006E3B1E /* Assets.xcassets in Resources */,
+				D69F0CC82443B2D900498E34 /* Deportes.json in Resources */,
 				D6B308B624412244009D4971 /* Edificios.json in Resources */,
+				D69F0CC62443B24E00498E34 /* Otros.json in Resources */,
 				D6B308BA24413DD5009D4971 /* Restaurantes.json in Resources */,
 				D6C919EC2440023E006E3B1E /* Main.storyboard in Resources */,
+				D69F0CCA2443B31800498E34 /* Zonas Comunes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
