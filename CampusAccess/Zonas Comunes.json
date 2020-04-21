@@ -5,27 +5,27 @@
    "description" : "Biblioteca del Campus Monterrey"
 },
 {
-   "nombre" : "Centro de Congresos",
+   "nombre" : "Centro Estudiantil",
    "latitude" : 55.5,
    "longitude" : 55.5,
-   "description" : "descripcion"
+   "description" : "Espacio donde las Sociedades de Alumnos realizan  eventos sociales, educativos, culturales, deportivos, etc."
 },
 {
    "nombre" : "Punto Blanco",
    "latitude" : 55.5,
    "longitude" : 55.5,
-   "description" : "descripcion"
+   "description" : "Espacio para la introspección, la meditación, el autoconocimiento y el encuentro espiritual."
 },
 {
    "nombre" : "Espacio de Reflexión",
    "latitude" : 55.5,
    "longitude" : 55.5,
-   "description" : "descripcion"
+   "description" : "Recinto para eliminar el estrés y brindar descanso a las largas jornadas diarias de los estudiantes."
 },
 {
    "nombre" : "INNOVaction Gym",
    "latitude" : 55.5,
    "longitude" : 55.5,
-   "description" : "Centro Educativo"
+   "description" : "Zona de innovación"
 }
 ]

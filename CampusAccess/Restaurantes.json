@@ -1,60 +1,66 @@
 [{
+  "nombre" : "Starbucks",
+  "latitude" : 55.5,
+  "longitude" : 55.5,
+  "description" : "Café, panadería y más"
+},
+{
+  "nombre" : "Tim Hortons",
+  "latitude" : 55.5,
+  "longitude" : 55.5,
+  "description" : "Café, panadería y más"
+},
+{
+  "nombre" : "Panem",
+  "latitude" : 55.5,
+  "longitude" : 55.5,
+  "description" : "Café, panadería y más"
+},
+{
    "nombre" : "Nectarworks",
    "latitude" : 55.5,
    "longitude" : 55.5,
-   "description" : "descripcion"
+   "description" : "Comida saludable"
  },
  {
    "nombre" : "Señor Latino",
    "latitude" : 55.5,
    "longitude" : 55.5,
-   "description" : "descripcion"
+   "description" : "Comida casera"
  },
  {
    "nombre" : "Doña Tota",
    "latitude" : 55.5,
    "longitude" : 55.5,
-   "description" : "descripcion"
- },
- {
-   "nombre" : "Tim Hortons",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
-   "description" : "descripcion"
+   "description" : "Gorditas de guisos"
  },
  {
    "nombre" : "Johnny Rockets",
    "latitude" : 55.5,
    "longitude" : 55.5,
-   "description" : "descripcion"
+   "description" : "Hamburguesas, sándwiches, malteadas y más"
  },
  {
   "nombre" : "Subway",
   "latitude" : 55.5,
   "longitude" : 55.5,
-  "description" : "descripcion"
+  "description" : "Sándwiches"
 },
- {
-   "nombre" : "Starbucks",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
-   "description" : "descripcion"
- },
  {
    "nombre" : "Papa Johns",
    "latitude" : 55.5,
    "longitude" : 55.5,
-   "description" : "descripcion"
+   "description" : "Pizzería"
  },
  {
    "nombre" : "Chilaquiles Tec",
    "latitude" : 55.5,
    "longitude" : 55.5,
-   "description" : "descripcion"
+   "description" : "Chilaquiles estilo Tec"
  },
  {
    "nombre" : "Food Box",
    "latitude" : 55.5,
    "longitude" : 55.5,
-   "description" : "descripcion"
+   "description" : "Hamburguesas"
  }]
