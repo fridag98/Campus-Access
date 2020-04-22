@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let apiKey = ProcessInfo.processInfo.environment["API_KEY"]
+        // TODO: - Change this to env variable
+        let apiKey = "YOUR-API-KEY" // DO NOT COMMIT TO GITHUB
         // Override point for customization after application launch.
         GMSServices.provideAPIKey("\(apiKey)")
         return true
