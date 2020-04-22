@@ -1,5 +1,5 @@
 //
-//  Lugares.swift
+//  Lugar.swift
 //  CampusAccess
 //
 //  Created by Frida Gutiérrez Mireles on 10/04/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Lugares: Codable {
+struct Lugar: Codable {
     var nombre : String
     var latitude : Double
     var longitude : Double

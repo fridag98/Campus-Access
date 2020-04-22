@@ -9,7 +9,7 @@
 import Foundation
 
 public class DataLoader {
-    var lugaresData = [Lugares]()
+    var lugaresData = [Lugar]()
     
     init(arch:String) {
         load(nombreArchivo: arch)
@@ -20,7 +20,7 @@ public class DataLoader {
             do{
                 let data = try Data(contentsOf: fileLocation)
                 let jsonDecoder = JSONDecoder()
-                let dataFromJson = try jsonDecoder.decode([Lugares].self, from: data)
+                let dataFromJson = try jsonDecoder.decode([Lugar].self, from: data)
                 self.lugaresData = dataFromJson
             }catch{
                 print("error al descargar la información del archivo")

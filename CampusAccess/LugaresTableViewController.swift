@@ -11,7 +11,7 @@ import UIKit
 class LugaresTableViewController: UITableViewController {
     
     var categoriaSeleccionada : String!
-    var arrLugares = [Lugares]()
+    var arrLugares = [Lugar]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
