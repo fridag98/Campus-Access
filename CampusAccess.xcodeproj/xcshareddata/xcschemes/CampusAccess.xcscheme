@@ -50,13 +50,6 @@
             ReferencedContainer = "container:CampusAccess.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "API_KEY"
-            value = "AIzaSyCtaV5YsoCQOJbrXpCE3tC1HLXFt9bFy_o"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
