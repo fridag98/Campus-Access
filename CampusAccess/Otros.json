@@ -1,18 +1,20 @@
-[{
-  "nombre" : "Punto Azul",
-  "latitude" : 55.5,
-  "longitude" : 55.5,
-  "description" : "Ubicado en el sótano de CETEC Torre Norte"
-},
-{
-  "nombre" : "CIMA",
-  "latitude" : 55.5,
-  "longitude" : 55.5,
-  "description" : "Centro de Impresión Avanzada"
-},
-{
-  "nombre" : "Enfermería",
-  "latitude" : 55.5,
-  "longitude" : 55.5,
-  "description" : "Enfermería del Campus Monterrey"
-}]
+[
+    {
+      "nombre" : "Punto Azul",
+      "latitude" : 25.652408,
+      "longitude" : -100.290261,
+      "description" : "Ubicado en el sótano de CETEC Torre Norte"
+    },
+    {
+      "nombre" : "CIMA",
+      "latitude" : 25.651233,
+      "longitude" : -100.288751,
+      "description" : "Centro de Impresión Avanzada"
+    },
+    {
+      "nombre" : "Enfermería",
+      "latitude" : 25.651279,
+      "longitude" : -100.289507,
+      "description" : "Enfermería del Campus Monterrey"
+    }
+]

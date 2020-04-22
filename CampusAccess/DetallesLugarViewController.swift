@@ -91,12 +91,10 @@ class DetallesLugarViewController: UIViewController, CLLocationManagerDelegate {
         polyline.strokeWidth = 3.0
         polyline.map = self.googleMaps
         
-        print("Here")
         let camera = GMSCameraPosition.camera(withLatitude: 25.651470, longitude: -100.291025, zoom: 20.0)
         self.googleMaps.camera = camera
         self.googleMaps.animate(to: camera)
         
-        print("Here too!")
     }
     
     @IBAction func btnDirections(_ sender: UIButton) {

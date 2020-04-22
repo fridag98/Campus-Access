@@ -1,66 +1,81 @@
-[{
-  "nombre" : "Starbucks",
-  "latitude" : 55.5,
-  "longitude" : 55.5,
-  "description" : "Café, panadería y más"
-},
-{
-  "nombre" : "Tim Hortons",
-  "latitude" : 55.5,
-  "longitude" : 55.5,
-  "description" : "Café, panadería y más"
-},
-{
-  "nombre" : "Panem",
-  "latitude" : 55.5,
-  "longitude" : 55.5,
-  "description" : "Café, panadería y más"
-},
-{
-   "nombre" : "Nectarworks",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
-   "description" : "Comida saludable"
- },
- {
-   "nombre" : "Señor Latino",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
-   "description" : "Comida casera"
- },
- {
-   "nombre" : "Doña Tota",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
-   "description" : "Gorditas de guisos"
- },
- {
-   "nombre" : "Johnny Rockets",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
-   "description" : "Hamburguesas, sándwiches, malteadas y más"
- },
- {
-  "nombre" : "Subway",
-  "latitude" : 55.5,
-  "longitude" : 55.5,
-  "description" : "Sándwiches"
-},
- {
-   "nombre" : "Papa Johns",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
-   "description" : "Pizzería"
- },
- {
-   "nombre" : "Chilaquiles Tec",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
-   "description" : "Chilaquiles estilo Tec"
- },
- {
-   "nombre" : "Food Box",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
-   "description" : "Hamburguesas"
- }]
+[
+    {
+      "nombre" : "Starbucks CIAP",
+      "latitude" : 25.652179,
+      "longitude" : -100.290019,
+      "description" : "Café, panadería y más"
+    },
+    {
+      "nombre" : "Starbucks El Borrego",
+      "latitude" : 25.649352,
+      "longitude" : -100.290297,
+      "description" : "Café, panadería y más"
+    },
+    {
+      "nombre" : "Starbucks Biblioteca",
+      "latitude" : 25.650231,
+      "longitude" : -100.289559,
+      "description" : "Café, panadería y más"
+    },
+
+    {
+      "nombre" : "Tim Hortons",
+      "latitude" : 25.650310,
+      "longitude" : -100.289807,
+      "description" : "Café, panadería y más"
+    },
+    {
+      "nombre" : "Panem",
+      "latitude" : 25.651442,
+      "longitude" : -100.289912,
+      "description" : "Café, panadería y más"
+    },
+    {
+       "nombre" : "Nectarworks",
+       "latitude" : 25.650499,
+       "longitude" : -100.289549,
+       "description" : "Comida saludable"
+     },
+     {
+       "nombre" : "Señor Latino",
+       "latitude" : 25.650490,
+       "longitude" : -100.289549,
+       "description" : "Comida casera"
+     },
+     {
+       "nombre" : "Doña Tota",
+       "latitude" : 25.651340,
+       "longitude" : -100.288822,
+       "description" : "Gorditas de guisos"
+     },
+     {
+       "nombre" : "Johnny Rockets",
+       "latitude" : 25.651502,
+       "longitude" : -100.288985,
+       "description" : "Hamburguesas, sándwiches, malteadas y más"
+     },
+     {
+      "nombre" : "Subway",
+      "latitude" : 25.651340,
+      "longitude" : -100.288856,
+      "description" : "Sándwiches"
+     },
+     {
+       "nombre" : "Papa Johns",
+       "latitude" : 25.651465,
+       "longitude" : -100.288958,
+       "description" : "Pizzería"
+     },
+     {
+       "nombre" : "Chilaquiles Tec",
+       "latitude" : 25.651465,
+       "longitude" : -100.288895,
+       "description" : "Chilaquiles estilo Tec"
+     },
+     {
+       "nombre" : "Food Box",
+       "latitude" : 25.649626,
+       "longitude" : -100.290382,
+       "description" : "Hamburguesas"
+     }
+]
