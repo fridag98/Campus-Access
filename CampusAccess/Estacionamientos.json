@@ -1,0 +1,114 @@
+[{
+    "nombre" : "E1",
+    "latitude" : 25.6531658,
+    "longitude" : -100.2879154,
+    "description" : "Estacionamiento 1"
+},
+{
+    "nombre" : "E4",
+    "latitude" : 25.6512572,
+    "longitude" : -100.2852460,
+    "description" : "Estacionamiento 4 Auditorio Luiz Elizondo"
+},
+{
+    "nombre" : "Profesores Sur",
+    "latitude" : 25.6511333,
+    "longitude" : -100.2863108,
+    "description" : "Estacionamiento Profesores Sur"
+},
+{
+    "nombre" : "Alumnos Norte",
+    "latitude" : 25.6526372,
+    "longitude" : -100.2847256,
+    "description" : "Estacionamiento Alumnos Norte"
+},
+{
+    "nombre" : "Edificio IV",
+    "latitude" : 25.6494924,
+    "longitude" : -100.2897816,
+    "description" : "Estacionamiento Edificio IV"
+},
+{
+    "nombre" : "Sótano del Centro de Congresos",
+    "latitude" : 25.6486250,
+    "longitude" : -100.2897816,
+    "description" : "Estacionamiento Sótano del Centro de Congresos"
+},
+{
+    "nombre" : "El Borrego",
+    "latitude" : 25.6493392,
+    "longitude" : -100.2906265,
+    "description" : "Estacionamiento El Borrego"
+},
+{
+    "nombre" : "CETEC",
+    "latitude" : 25.6509824,
+    "longitude" : -100.2915123,
+    "description" : "Estacionamiento CETEC"
+},
+{
+    "nombre" : "Rectoría",
+    "latitude" : 25.6519254,
+    "longitude" : -100.2912293,
+    "description" : "Estacionamiento Rectoría"
+},
+{
+    "nombre" : "CEDES",
+    "latitude" : 25.6546041,
+    "longitude" : -100.2918874,
+    "description" : "Estacionamiento CEDES"
+},
+{
+    "nombre" : "E9",
+    "latitude" : 25.6564697,
+    "longitude" : -100.2919810,
+    "description" : "Estacionamiento E9 Rosales"
+},
+{
+    "nombre" : "E7",
+    "latitude" : 25.6545225,
+    "longitude" : -100.2900635,
+    "description" : "Estacionamiento E7 Casa Naranjos"
+},
+{
+    "nombre" : "E5",
+    "latitude" : 25.6541555,
+    "longitude" : -100.2867104,
+    "description" : "Estacionamiento E5"
+},
+{
+    "nombre" : "E6",
+    "latitude" : 25.6545998,
+    "longitude" : -100.2881702,
+    "description" : "Estacionamiento E6"
+},
+{
+    "nombre" : "E11",
+    "latitude" : 25.6542381,
+    "longitude" : -100.2843766,
+    "description" : "Estacionamiento E11"
+},
+{
+    "nombre" : "Edificios Norte",
+    "latitude" : 25.6557165,
+    "longitude" : -100.2847065,
+    "description" : "Estacionamiento Edificios Norte"
+},
+{
+    "nombre" : "Edificios Norte J. Cantú Leal",
+    "latitude" : 25.6557117,
+    "longitude" : -100.2837198,
+    "description" : "Estacionamiento Edificios Norte J. Cantú Leal"
+},
+{
+    "nombre" : "Pabellón Tec",
+    "latitude" : 25.6480229,
+    "longitude" : -100.2894627,
+    "description" : "Estacionamiento Pabellón Tec"
+},
+{
+    "nombre" : "DistritoTec",
+    "latitude" : 25.6513956,
+    "longitude" : -100.2934223,
+    "description" : "Estacionamiento DistritoTec"
+}]
