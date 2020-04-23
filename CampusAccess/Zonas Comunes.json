@@ -1,31 +1,30 @@
 [{
    "nombre" : "Biblioteca Tec",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
+   "latitude" : 25.650327,
+   "longitude" : -100.289880,
    "description" : "Biblioteca del Campus Monterrey"
 },
 {
    "nombre" : "Centro Estudiantil",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
+   "latitude" : 25.648905,
+   "longitude" : -100.289832,
    "description" : "Espacio donde las Sociedades de Alumnos realizan  eventos sociales, educativos, culturales, deportivos, etc."
 },
 {
    "nombre" : "Punto Blanco",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
+   "latitude" : 25.648795,
+   "longitude" : -100.290154,
    "description" : "Espacio para la introspección, la meditación, el autoconocimiento y el encuentro espiritual."
 },
 {
    "nombre" : "Espacio de Reflexión",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
+   "latitude" : 25.652187,
+   "longitude" : -100.290773,
    "description" : "Recinto para eliminar el estrés y brindar descanso a las largas jornadas diarias de los estudiantes."
 },
 {
    "nombre" : "INNOVaction Gym",
-   "latitude" : 55.5,
-   "longitude" : 55.5,
-   "description" : "Zona de innovación"
-}
-]
+   "latitude" : 25.650395,
+   "longitude" : -100.290978,
+   "description" : "Ubicado en 2dos piso de CETEC Norte"
+}]
