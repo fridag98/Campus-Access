@@ -25,6 +25,9 @@
 		D6C919F124400240006E3B1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6C919EF24400240006E3B1E /* LaunchScreen.storyboard */; };
 		D6C919F924400305006E3B1E /* LugaresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C919F824400305006E3B1E /* LugaresTableViewController.swift */; };
 		D6C919FB244005BB006E3B1E /* CategoriasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C919FA244005BB006E3B1E /* CategoriasViewController.swift */; };
+		D6CC12222461C1E3004F3746 /* SigUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC12212461C1E3004F3746 /* SigUpViewController.swift */; };
+		D6CC12242461C1F9004F3746 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC12232461C1F9004F3746 /* LoginViewController.swift */; };
+		D6CC12262461C217004F3746 /* HomeStudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC12252461C217004F3746 /* HomeStudentsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		D6C919F224400240006E3B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6C919F824400305006E3B1E /* LugaresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LugaresTableViewController.swift; sourceTree = "<group>"; };
 		D6C919FA244005BB006E3B1E /* CategoriasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriasViewController.swift; sourceTree = "<group>"; };
+		D6CC12212461C1E3004F3746 /* SigUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigUpViewController.swift; sourceTree = "<group>"; };
+		D6CC12232461C1F9004F3746 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D6CC12252461C217004F3746 /* HomeStudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStudentsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,14 +102,33 @@
 				D6C919E42440023E006E3B1E /* AppDelegate.swift */,
 				D6C919E62440023E006E3B1E /* SceneDelegate.swift */,
 				D6C919EA2440023E006E3B1E /* Main.storyboard */,
-				D6B308BF244145AF009D4971 /* DetallesLugarViewController.swift */,
+				D6CC12282461C2A0004F3746 /* JSONS */,
+				D6CC12272461C255004F3746 /* loginControllers */,
 				D6B308BB24413E5C009D4971 /* Lugar.swift */,
 				D6B308BD24413F3A009D4971 /* DataLoader.swift */,
+				D6B308BF244145AF009D4971 /* DetallesLugarViewController.swift */,
 				D6C919FA244005BB006E3B1E /* CategoriasViewController.swift */,
 				D6C919F824400305006E3B1E /* LugaresTableViewController.swift */,
 				D6C919ED24400240006E3B1E /* Assets.xcassets */,
 				D6C919EF24400240006E3B1E /* LaunchScreen.storyboard */,
 				D6C919F224400240006E3B1E /* Info.plist */,
+			);
+			path = CampusAccess;
+			sourceTree = "<group>";
+		};
+		D6CC12272461C255004F3746 /* loginControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D6CC12212461C1E3004F3746 /* SigUpViewController.swift */,
+				D6CC12232461C1F9004F3746 /* LoginViewController.swift */,
+				D6CC12252461C217004F3746 /* HomeStudentsViewController.swift */,
+			);
+			path = loginControllers;
+			sourceTree = "<group>";
+		};
+		D6CC12282461C2A0004F3746 /* JSONS */ = {
+			isa = PBXGroup;
+			children = (
 				10EE5F2E2451060800B93524 /* Accesos.json */,
 				10EE5F2F2451060800B93524 /* Estacionamientos.json */,
 				D6B308B524412244009D4971 /* Edificios.json */,
@@ -112,7 +137,7 @@
 				D69F0CC92443B31800498E34 /* Zonas Comunes.json */,
 				D69F0CC52443B24E00498E34 /* Otros.json */,
 			);
-			path = CampusAccess;
+			path = JSONS;
 			sourceTree = "<group>";
 		};
 		E79CDE6493CD6249BFD4D183 /* Pods */ = {
@@ -264,12 +289,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6CC12242461C1F9004F3746 /* LoginViewController.swift in Sources */,
 				D6B308BC24413E5C009D4971 /* Lugar.swift in Sources */,
 				D6B308BE24413F3A009D4971 /* DataLoader.swift in Sources */,
 				D6C919E52440023E006E3B1E /* AppDelegate.swift in Sources */,
+				D6CC12222461C1E3004F3746 /* SigUpViewController.swift in Sources */,
 				D6B308C0244145AF009D4971 /* DetallesLugarViewController.swift in Sources */,
 				D6C919F924400305006E3B1E /* LugaresTableViewController.swift in Sources */,
 				D6C919E72440023E006E3B1E /* SceneDelegate.swift in Sources */,
+				D6CC12262461C217004F3746 /* HomeStudentsViewController.swift in Sources */,
 				D6C919FB244005BB006E3B1E /* CategoriasViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
