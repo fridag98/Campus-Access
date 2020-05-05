@@ -28,6 +28,8 @@
 		D6CC12222461C1E3004F3746 /* SigUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC12212461C1E3004F3746 /* SigUpViewController.swift */; };
 		D6CC12242461C1F9004F3746 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC12232461C1F9004F3746 /* LoginViewController.swift */; };
 		D6CC12262461C217004F3746 /* HomeStudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC12252461C217004F3746 /* HomeStudentsViewController.swift */; };
+		D6CC122A2461C499004F3746 /* HomeVisitantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC12292461C499004F3746 /* HomeVisitantViewController.swift */; };
+		D6CC122C2461C4EF004F3746 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC122B2461C4EF004F3746 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		D6CC12212461C1E3004F3746 /* SigUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigUpViewController.swift; sourceTree = "<group>"; };
 		D6CC12232461C1F9004F3746 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D6CC12252461C217004F3746 /* HomeStudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStudentsViewController.swift; sourceTree = "<group>"; };
+		D6CC12292461C499004F3746 /* HomeVisitantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVisitantViewController.swift; sourceTree = "<group>"; };
+		D6CC122B2461C4EF004F3746 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 				D6C919E42440023E006E3B1E /* AppDelegate.swift */,
 				D6C919E62440023E006E3B1E /* SceneDelegate.swift */,
 				D6C919EA2440023E006E3B1E /* Main.storyboard */,
+				D6CC122B2461C4EF004F3746 /* ViewController.swift */,
 				D6CC12282461C2A0004F3746 /* JSONS */,
 				D6CC12272461C255004F3746 /* loginControllers */,
 				D6B308BB24413E5C009D4971 /* Lugar.swift */,
@@ -122,6 +127,7 @@
 				D6CC12212461C1E3004F3746 /* SigUpViewController.swift */,
 				D6CC12232461C1F9004F3746 /* LoginViewController.swift */,
 				D6CC12252461C217004F3746 /* HomeStudentsViewController.swift */,
+				D6CC12292461C499004F3746 /* HomeVisitantViewController.swift */,
 			);
 			path = loginControllers;
 			sourceTree = "<group>";
@@ -295,7 +301,9 @@
 				D6C919E52440023E006E3B1E /* AppDelegate.swift in Sources */,
 				D6CC12222461C1E3004F3746 /* SigUpViewController.swift in Sources */,
 				D6B308C0244145AF009D4971 /* DetallesLugarViewController.swift in Sources */,
+				D6CC122C2461C4EF004F3746 /* ViewController.swift in Sources */,
 				D6C919F924400305006E3B1E /* LugaresTableViewController.swift in Sources */,
+				D6CC122A2461C499004F3746 /* HomeVisitantViewController.swift in Sources */,
 				D6C919E72440023E006E3B1E /* SceneDelegate.swift in Sources */,
 				D6CC12262461C217004F3746 /* HomeStudentsViewController.swift in Sources */,
 				D6C919FB244005BB006E3B1E /* CategoriasViewController.swift in Sources */,
