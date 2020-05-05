@@ -100,7 +100,7 @@ class DetallesLugarViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func btnDirections(_ sender: UIButton) {
         
         // TODO: - Change this to env variable
-        let apiKey = "AIzaSyAhYu01WEqxgwjIrnQp7MNtI6vQXvnrBWo" // DO NOT COMMIT THIS TO GITHUB
+        let apiKey = "YOUR_API_KEY" //DO NOT COMMIT THIS TO GITHUB
         Alamofire.request("https://maps.googleapis.com/maps/api/directions/json?origin=25.651470,-100.291025&destination=\(lugar.latitude),\(lugar.longitude)&mode=walking&key=\(apiKey)").responseJSON { response in
             
             if let result = response.result.value as? Dictionary<String, AnyObject> {
