@@ -49,4 +49,8 @@ class CategoriasViewController: UIViewController, UITableViewDelegate, UITableVi
         let indice = categoryTableView.indexPathForSelectedRow!
         vistaLugares.categoriaSeleccionada = categorias[indice.row]
     }
+    
+    @IBAction func btnRegresar(_ sender: Any) {
+      dismiss(animated: true, completion: nil)
+    }
 }

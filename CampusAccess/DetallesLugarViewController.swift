@@ -40,7 +40,7 @@ class DetallesLugarViewController: UIViewController, CLLocationManagerDelegate {
         destinationMarker.title = lugar.nombre
         destinationMarker.map = googleMaps
         
-        //Marker temporal que simula el current location dentro del tec
+        //marker temporal que simula el current location dentro del tec
         let sourceMarker = GMSMarker()
         sourceMarker.position = CLLocationCoordinate2D(latitude: 25.651470, longitude: -100.291025)
         sourceMarker.title = "Tu ubicacion"
