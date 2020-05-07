@@ -15,48 +15,58 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var tfCorreo: UITextField!
     @IBOutlet weak var tfContrasena: UITextField!
     @IBOutlet weak var btnLogin: UIButton!
-    @IBOutlet weak var lbError: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         logo.image = UIImage(named: "logoPrueba")!
-        lbError.alpha = 0
         btnLogin.layer.cornerRadius = 25.0
-
     }
     
     @IBAction func loginTapped(_ sender: Any) {
         if(tfCorreo.text! != "" && tfContrasena.text! != ""){
             signIn()
         } else {
-            showError("Llenar todos los datos")
+            showError("Todos los datos deben ser llenados")
         }
     }
     
     func signIn() {
+        var student = false
+        if (tfCorreo.text!.contains("@itesm.mx") || tfCorreo.text!.contains("@tec.mx")) {
+            student = true
+        }
         Auth.auth().signIn(withEmail: tfCorreo.text!, password: tfContrasena.text!) { (result, error) in
             if error != nil {
                 self.showError("Contraseña o correo incorrecto")
-            } else {
-                self.transitionToMenu()
+            } else { //ir a la vista según el tipo
+                self.transitionToMenu(typeUser: student)
             }
         }
     }
     
     func showError(_ message:String){
-        lbError.text = message
-        lbError.alpha = 1
+        let alert = UIAlertController(title: "Campus Access", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     
-    func transitionToMenu(){
-        let visitorsMenu = storyboard?.instantiateViewController(withIdentifier: "visitorsMenu") as? HomeVisitantViewController
-        view.window?.rootViewController = visitorsMenu
+    func transitionToMenu(typeUser: Bool){
+        var menu: Any!
+        var type: String!
+        if(typeUser){
+            type = "studentsMenu"
+            menu = storyboard?.instantiateViewController(withIdentifier: type) as? HomeStudentsViewController
+        } else{
+            type = "visitorsMenu"
+            menu = storyboard?.instantiateViewController(withIdentifier: type) as? HomeVisitantViewController
+        }
+        view.window?.rootViewController = menu as? UIViewController
         view.window?.makeKeyAndVisible()
     }
     
     @IBAction func btnInicio(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-
     }
     
 }

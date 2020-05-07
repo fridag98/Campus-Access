@@ -15,7 +15,14 @@ class HomeVisitantViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         btnLogOut.layer.cornerRadius = 25.0
-
     }
+    
+    
+    @IBAction func btnLogout(_ sender: UIButton) {
+        let menu = storyboard?.instantiateViewController(withIdentifier: "homeView") as? ViewController
+          view.window?.rootViewController = menu
+          view.window?.makeKeyAndVisible()
+    }
+    
 
 }

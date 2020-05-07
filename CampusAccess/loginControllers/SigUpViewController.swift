@@ -18,29 +18,25 @@ class SigUpViewController: UIViewController {
     @IBOutlet weak var tfApellido: UITextField!
     @IBOutlet weak var tfCorreo: UITextField!
     @IBOutlet weak var tfContrasena: UITextField!
-    @IBOutlet weak var tfIdentificacion: UITextField!
     @IBOutlet weak var btnSignUp: UIButton!
-    @IBOutlet weak var lbError: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         logo.image = UIImage(named: "logoPrueba")!
-        lbError.alpha = 0
         btnSignUp.layer.cornerRadius = 25.0
     }
     
     func isPasswordValid(_ password: String) -> Bool{
-        //largo de 8
+        //contraseña largo de minimo 8
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
         return passwordTest.evaluate(with: password)
     }
     
-    //si no hay error regresar nil else un error message
+    //regresar nil o un error message
     func validateFields() -> String? {
         //validar todo los campos llenos
-        if (tfNombre.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || tfApellido.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || tfCorreo.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || tfContrasena.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""){
-            
-            return "Llenar todos los datos"
+        if (tfNombre.text == "" || tfApellido.text! == "" || tfCorreo.text! == "" || tfContrasena.text! == ""){
+            return "Todos los datos deben ser llenados."
         }
         
         //validar si la contraseña es segura
@@ -49,7 +45,6 @@ class SigUpViewController: UIViewController {
         }
         return nil
     }
-
     
     @IBAction func signUpTapped(_ sender: Any) {
         let error = validateFields()
@@ -57,15 +52,13 @@ class SigUpViewController: UIViewController {
         if(error != nil){
             showError(error!)
         } else{
-            let correo = tfCorreo.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let contrasena = tfContrasena.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             //crear usuario
-            Auth.auth().createUser(withEmail: correo, password: contrasena) { (result, fail) in
+            Auth.auth().createUser(withEmail: tfCorreo.text!, password: tfContrasena.text!) { (result, fail) in
                 if fail != nil {
                     self.showError("No se pudo crear la cuenta")
                 } else{
                     let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: ["firstname":self.tfNombre.text!, "lastname":self.tfApellido.text!, "uid": result!.user.uid]) { (error) in
+                    db.collection("visitantes").addDocument(data: ["firstname":self.tfNombre.text!, "lastname":self.tfApellido.text!, "uid": result!.user.uid]) { (error) in
                         if error != nil {
                             print("No se guardaron los datos del usuario")
                         }
@@ -78,8 +71,10 @@ class SigUpViewController: UIViewController {
     }
     
     func showError(_ message:String){
-        lbError.text = message
-        lbError.alpha = 1
+        let alert = UIAlertController(title: "Campus Access", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     
     func transitionToMenu(){
@@ -90,7 +85,6 @@ class SigUpViewController: UIViewController {
     
     @IBAction func btnInicio(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-
     }
     
 }
