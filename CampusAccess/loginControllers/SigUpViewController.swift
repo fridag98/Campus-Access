@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 import Firebase
 import FirebaseFirestore
+import FirebaseStorage
 
 class SigUpViewController: UIViewController {
 
@@ -66,6 +67,10 @@ class SigUpViewController: UIViewController {
             showError(error!)
         } else{
             //crear usuario
+            guard let imageData = imgIdentificacion.jpegData(compressionQuality: 0.4) else {
+                return
+            }
+            
             Auth.auth().createUser(withEmail: tfCorreo.text!, password: tfContrasena.text!) { (result, fail) in
                 if fail != nil {
                     self.showError("No se pudo crear la cuenta")
@@ -78,6 +83,26 @@ class SigUpViewController: UIViewController {
                         "identificacionURL": "",
                         "uid": result!.user.uid
                     ]
+                    let storageRef = Storage.storage().reference(forURL: "gs://campusaccess-863ef.appspot.com")
+                    let storageIdenRef = storageRef.child("identificacion").child(result!.user.uid)
+                                       
+                    let metadata = StorageMetadata()
+                    metadata.contentType = "image/jpg"
+                    storageIdenRef.putData(imageData, metadata: metadata, completion: {(storageMetadata,error) in
+                        if error != nil{
+                            print("error en subir la foto")
+                            return
+                        }
+                    })
+                   
+                    //MARK: - checar url
+                   storageIdenRef.downloadURL(completion: {(url, error) in
+                        if let metaImageUrl = url?.absoluteString {
+                            print(metaImageUrl)
+                            dataUser["identificacionURL"] = metaImageUrl
+                        }
+                    })
+                    
                     db.collection("visitantes").addDocument(data: dataUser) { (error) in
                         if error != nil {
                             print("No se guardaron los datos del usuario")
@@ -102,5 +127,4 @@ class SigUpViewController: UIViewController {
     @IBAction func btnInicio(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
 }
