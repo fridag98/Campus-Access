@@ -12,10 +12,13 @@ import UIKit
 class IdentificacionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     var identificacion : UIImage!
+    @IBOutlet weak var photoPlaceholder: UIButton!
+    @IBOutlet weak var photoSVG: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         identificacion = nil
+        print("Hello")
     }
 
     //el textfield tienen un botton invisible, la cámara tienen un tap
@@ -23,13 +26,14 @@ class IdentificacionViewController: UIViewController, UIImagePickerControllerDel
         let picker = UIImagePickerController()
          picker.delegate = self
          picker.sourceType = .photoLibrary
-         
          present(picker, animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let foto = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         identificacion = foto
+        photoPlaceholder.setImage(foto, for: .normal)
+        photoSVG.isHidden = true
         dismiss(animated:true, completion:nil)
     }
     

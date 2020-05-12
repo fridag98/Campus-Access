@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d1K-xd-snk">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -619,38 +619,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crv-ax-ego">
-                                <rect key="frame" x="30" y="495" width="354" height="226"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Campus Access, como medida de seguridad, requiere de una identificación suya para mostrarla al momento de ingresar al campus. Esta información solo se utilizará para este fin. 
-(no sé qué más UwU)</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aviso Legal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQ5-7t-IXd">
-                                <rect key="frame" x="30" y="458" width="240" height="29"/>
+                                <rect key="frame" x="30" y="344" width="240" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Subir identificación" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QWK-qT-ycB">
-                                <rect key="frame" x="47" y="228" width="276" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ha-Ms-suM">
+                                <rect key="frame" x="93" y="108" width="228" height="228"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ha-Ms-suM">
-                                <rect key="frame" x="47" y="228" width="294" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="addPhoto"/>
                                 <connections>
                                     <action selector="subirFoto:" destination="lbx-cO-DgC" eventType="touchUpInside" id="WtM-0h-pA5"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZfS-hY-w6s">
-                                <rect key="frame" x="298" y="244.5" width="71" height="58"/>
+                                <rect key="frame" x="250" y="276.5" width="71" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
@@ -659,7 +644,7 @@
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omq-5G-yn8">
-                                <rect key="frame" x="137" y="344" width="115" height="37"/>
+                                <rect key="frame" x="150" y="694" width="115" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
@@ -670,12 +655,25 @@
                                     <segue destination="GRZ-PB-7kF" kind="unwind" unwindAction="unwindIdentificacionWithUnwindSegue:" id="Cm3-LZ-YHW"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crv-ax-ego">
+                                <rect key="frame" x="30" y="387" width="354" height="226"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Campus Access, como medida de seguridad, requiere de una identificación suya para mostrarla al momento de ingresar al campus. Esta información solo se utilizará para este fin. 
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="K5B-6e-827"/>
                     </view>
                     <navigationItem key="navigationItem" id="vL7-mJ-5h9"/>
+                    <connections>
+                        <outlet property="photoPlaceholder" destination="6Ha-Ms-suM" id="s2s-4s-bBI"/>
+                        <outlet property="photoSVG" destination="ZfS-hY-w6s" id="EzD-y2-oL1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q2u-LT-hIg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="GRZ-PB-7kF" userLabel="Exit" sceneMemberID="exit"/>
@@ -793,6 +791,7 @@
                     </view>
                     <connections>
                         <outlet property="btnLogOut" destination="uvW-ad-gUo" id="KD6-Qo-R5Y"/>
+                        <outlet property="profilePicture" destination="5T3-rN-0OB" id="Ev1-t0-afr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yi-Yx-PLH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -861,6 +860,7 @@
         <segue reference="zih-aA-17k"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="addPhoto" width="512" height="512"/>
         <image name="camera.fill" catalog="system" width="128" height="96"/>
     </resources>
 </document>

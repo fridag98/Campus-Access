@@ -83,6 +83,7 @@ class SigUpViewController: UIViewController {
                         "identificacionURL": "",
                         "uid": result!.user.uid
                     ]
+                    print(result!.user.uid)
                     let storageRef = Storage.storage().reference(forURL: "gs://campusaccess-863ef.appspot.com")
                     let storageIdenRef = storageRef.child("identificacion").child(result!.user.uid)
                                        
@@ -93,23 +94,23 @@ class SigUpViewController: UIViewController {
                             print("error en subir la foto")
                             return
                         }
+                        //MARK: - checar url
+
+                        storageIdenRef.downloadURL(completion: {(url, error) in
+                            if let metaImageUrl = url?.absoluteString {
+                                print(metaImageUrl)
+                                dataUser["identificacionURL"] = metaImageUrl
+                            }
+                            db.collection("visitantes").addDocument(data: dataUser) { (error) in
+                                if error != nil {
+                                    print("No se guardaron los datos del usuario")
+                                }
+                                //ir a la pantalla necesaria
+                                self.transitionToMenu()
+                            }
+                            
+                        })
                     })
-                   
-                    //MARK: - checar url
-                   storageIdenRef.downloadURL(completion: {(url, error) in
-                        if let metaImageUrl = url?.absoluteString {
-                            print(metaImageUrl)
-                            dataUser["identificacionURL"] = metaImageUrl
-                        }
-                    })
-                    
-                    db.collection("visitantes").addDocument(data: dataUser) { (error) in
-                        if error != nil {
-                            print("No se guardaron los datos del usuario")
-                        }
-                    }
-                    //ir a la pantalla necesaria
-                    self.transitionToMenu()
                 }
             }
         }

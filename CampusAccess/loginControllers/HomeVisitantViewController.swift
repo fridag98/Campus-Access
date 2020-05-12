@@ -11,6 +11,7 @@ import UIKit
 class HomeVisitantViewController: UIViewController {
 
     @IBOutlet weak var btnLogOut: UIButton!
+    @IBOutlet weak var profilePicture: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
