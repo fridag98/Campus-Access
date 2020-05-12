@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
             if error != nil {
                 self.showError("Contraseña o correo incorrecto")
             } else { //ir a la vista según el tipo
-                self.transitionToMenu(typeUser: student)
+                self.performSegue(withIdentifier: "toHomeViewControllerFromLogIn", sender: self)
             }
         }
     }
@@ -50,23 +50,10 @@ class LoginViewController: UIViewController {
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
-    
-    func transitionToMenu(typeUser: Bool){
-        var menu: Any!
-        var type: String!
-        if(typeUser){
-            type = "studentsMenu"
-            menu = storyboard?.instantiateViewController(withIdentifier: type) as? HomeStudentsViewController
-        } else{
-            type = "visitorsMenu"
-            menu = storyboard?.instantiateViewController(withIdentifier: type) as? HomeVisitantViewController
-        }
-        view.window?.rootViewController = menu as? UIViewController
-        view.window?.makeKeyAndVisible()
-    }
-    
+        
     @IBAction func btnInicio(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+       // dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
 }

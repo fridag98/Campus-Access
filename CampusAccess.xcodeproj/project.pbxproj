@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1095EFB4246A774E00E3F65D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1095EFB3246A774E00E3F65D /* UserModel.swift */; };
 		10EE5F2B245027CC00B93524 /* Pods_CampusAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F4F05E110EC402DDE90666 /* Pods_CampusAccess.framework */; };
 		10EE5F302451060800B93524 /* Accesos.json in Resources */ = {isa = PBXBuildFile; fileRef = 10EE5F2E2451060800B93524 /* Accesos.json */; };
 		10EE5F312451060800B93524 /* Estacionamientos.json in Resources */ = {isa = PBXBuildFile; fileRef = 10EE5F2F2451060800B93524 /* Estacionamientos.json */; };
@@ -29,12 +30,12 @@
 		D6C919FB244005BB006E3B1E /* CategoriasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C919FA244005BB006E3B1E /* CategoriasViewController.swift */; };
 		D6CC12222461C1E3004F3746 /* SigUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC12212461C1E3004F3746 /* SigUpViewController.swift */; };
 		D6CC12242461C1F9004F3746 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC12232461C1F9004F3746 /* LoginViewController.swift */; };
-		D6CC12262461C217004F3746 /* HomeStudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC12252461C217004F3746 /* HomeStudentsViewController.swift */; };
-		D6CC122A2461C499004F3746 /* HomeVisitantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC12292461C499004F3746 /* HomeVisitantViewController.swift */; };
+		D6CC12262461C217004F3746 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC12252461C217004F3746 /* HomeViewController.swift */; };
 		D6CC122C2461C4EF004F3746 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC122B2461C4EF004F3746 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1095EFB3246A774E00E3F65D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		10EE5F2E2451060800B93524 /* Accesos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Accesos.json; sourceTree = "<group>"; };
 		10EE5F2F2451060800B93524 /* Estacionamientos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Estacionamientos.json; sourceTree = "<group>"; };
 		57F4F05E110EC402DDE90666 /* Pods_CampusAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,8 +62,7 @@
 		D6C919FA244005BB006E3B1E /* CategoriasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriasViewController.swift; sourceTree = "<group>"; };
 		D6CC12212461C1E3004F3746 /* SigUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigUpViewController.swift; sourceTree = "<group>"; };
 		D6CC12232461C1F9004F3746 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D6CC12252461C217004F3746 /* HomeStudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStudentsViewController.swift; sourceTree = "<group>"; };
-		D6CC12292461C499004F3746 /* HomeVisitantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVisitantViewController.swift; sourceTree = "<group>"; };
+		D6CC12252461C217004F3746 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D6CC122B2461C4EF004F3746 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1095EFB0246A74D600E3F65D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1095EFB3246A774E00E3F65D /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D4BE23A338A1FFB76CCDB265 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +115,7 @@
 		D6C919E32440023E006E3B1E /* CampusAccess */ = {
 			isa = PBXGroup;
 			children = (
+				1095EFB0246A74D600E3F65D /* Models */,
 				D6C919E42440023E006E3B1E /* AppDelegate.swift */,
 				D6C919E62440023E006E3B1E /* SceneDelegate.swift */,
 				D6C919EA2440023E006E3B1E /* Main.storyboard */,
@@ -132,8 +141,7 @@
 			children = (
 				D6CC12212461C1E3004F3746 /* SigUpViewController.swift */,
 				D6CC12232461C1F9004F3746 /* LoginViewController.swift */,
-				D6CC12252461C217004F3746 /* HomeStudentsViewController.swift */,
-				D6CC12292461C499004F3746 /* HomeVisitantViewController.swift */,
+				D6CC12252461C217004F3746 /* HomeViewController.swift */,
 			);
 			path = loginControllers;
 			sourceTree = "<group>";
@@ -307,13 +315,13 @@
 				D6B308BC24413E5C009D4971 /* Lugar.swift in Sources */,
 				D6B308BE24413F3A009D4971 /* DataLoader.swift in Sources */,
 				D6C919E52440023E006E3B1E /* AppDelegate.swift in Sources */,
+				1095EFB4246A774E00E3F65D /* UserModel.swift in Sources */,
 				D6CC12222461C1E3004F3746 /* SigUpViewController.swift in Sources */,
 				D6B308C0244145AF009D4971 /* DetallesLugarViewController.swift in Sources */,
 				D6CC122C2461C4EF004F3746 /* ViewController.swift in Sources */,
 				D6C919F924400305006E3B1E /* LugaresTableViewController.swift in Sources */,
-				D6CC122A2461C499004F3746 /* HomeVisitantViewController.swift in Sources */,
 				D6C919E72440023E006E3B1E /* SceneDelegate.swift in Sources */,
-				D6CC12262461C217004F3746 /* HomeStudentsViewController.swift in Sources */,
+				D6CC12262461C217004F3746 /* HomeViewController.swift in Sources */,
 				D6C919FB244005BB006E3B1E /* CategoriasViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

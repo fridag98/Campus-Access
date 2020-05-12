@@ -101,12 +101,13 @@ class SigUpViewController: UIViewController {
                                 print(metaImageUrl)
                                 dataUser["identificacionURL"] = metaImageUrl
                             }
-                            db.collection("visitantes").addDocument(data: dataUser) { (error) in
+                            let collection = UserModel.getCollection(fromEmail: result!.user.email!)
+                            db.collection(collection).addDocument(data: dataUser) { (error) in
                                 if error != nil {
                                     print("No se guardaron los datos del usuario")
                                 }
                                 //ir a la pantalla necesaria
-                                self.transitionToMenu()
+                                self.performSegue(withIdentifier: "toHomeViewControllerFromSignUp", sender: self)
                             }
                             
                         })
@@ -116,16 +117,12 @@ class SigUpViewController: UIViewController {
         }
     }
     
-    func transitionToMenu(){
-        let visitorsMenu = storyboard?.instantiateViewController(withIdentifier: "visitorsMenu") as? HomeVisitantViewController
-        view.window?.rootViewController = visitorsMenu
-        view.window?.makeKeyAndVisible()
-    }
 
     @IBAction func unwindIdentificacion(unwindSegue : UIStoryboardSegue){
     }
     
     @IBAction func btnInicio(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        //dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
 }
