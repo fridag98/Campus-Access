@@ -18,7 +18,6 @@ class IdentificacionViewController: UIViewController, UIImagePickerControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         identificacion = nil
-        print("Hello")
     }
 
     //el textfield tienen un botton invisible, la cámara tienen un tap

@@ -16,6 +16,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var tfContrasena: UITextField!
     @IBOutlet weak var btnLogin: UIButton!
     
+    override func viewDidDisappear(_ animated: Bool) {
+        self.removeSpinner()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         logo.image = UIImage(named: "logoPrueba")!
@@ -23,20 +27,19 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginTapped(_ sender: Any) {
+        self.showSpinner()
         if(tfCorreo.text! != "" && tfContrasena.text! != ""){
             signIn()
         } else {
-            showError("Todos los datos deben ser llenados")
+            self.removeSpinner()
+            showError("Todos los datos deben llenarse")
         }
     }
     
     func signIn() {
-        var student = false
-        if (tfCorreo.text!.contains("@itesm.mx") || tfCorreo.text!.contains("@tec.mx")) {
-            student = true
-        }
         Auth.auth().signIn(withEmail: tfCorreo.text!, password: tfContrasena.text!) { (result, error) in
             if error != nil {
+                self.removeSpinner()
                 self.showError("Contraseña o correo incorrecto")
             } else { //ir a la vista según el tipo
                 self.performSegue(withIdentifier: "toHomeViewControllerFromLogIn", sender: self)

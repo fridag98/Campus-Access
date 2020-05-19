@@ -1,30 +1,32 @@
-[{
-   "nombre" : "Biblioteca Tec",
-   "latitude" : 25.650327,
-   "longitude" : -100.289880,
-   "description" : "Biblioteca del Campus Monterrey"
-},
-{
-   "nombre" : "Centro Estudiantil",
-   "latitude" : 25.648905,
-   "longitude" : -100.289832,
-   "description" : "Espacio donde las Sociedades de Alumnos realizan  eventos sociales, educativos, culturales, deportivos, etc."
-},
-{
-   "nombre" : "Punto Blanco",
-   "latitude" : 25.648795,
-   "longitude" : -100.290154,
-   "description" : "Espacio para la introspección, la meditación, el autoconocimiento y el encuentro espiritual."
-},
-{
-   "nombre" : "Espacio de Reflexión",
-   "latitude" : 25.652187,
-   "longitude" : -100.290773,
-   "description" : "Recinto para eliminar el estrés y brindar descanso a las largas jornadas diarias de los estudiantes."
-},
-{
-   "nombre" : "INNOVaction Gym",
-   "latitude" : 25.650395,
-   "longitude" : -100.290978,
-   "description" : "Ubicado en 2dos piso de CETEC Norte"
-}]
+[
+    {
+       "nombre" : "Biblioteca Tec",
+       "latitude" : 25.650327,
+       "longitude" : -100.289880,
+       "description" : "Biblioteca del Campus Monterrey"
+    },
+    {
+       "nombre" : "Centro de Congresos",
+       "latitude" : 25.648905,
+       "longitude" : -100.289832,
+       "description" : "Espacio donde se realizan eventos sociales, educativos, culturales y deportivos."
+    },
+    {
+       "nombre" : "Punto Blanco",
+       "latitude" : 25.648795,
+       "longitude" : -100.290154,
+       "description" : "Espacio para la meditación y el autoconocimiento."
+    },
+    {
+       "nombre" : "Espacio de Reflexión",
+       "latitude" : 25.652187,
+       "longitude" : -100.290773,
+       "description" : "Espacio para eliminar el estrés y brindar descanso a las jornadas de los estudiantes."
+    },
+    {
+       "nombre" : "INNOVaction Gym",
+       "latitude" : 25.650395,
+       "longitude" : -100.290978,
+       "description" : "Ubicado en el 2do piso de CETEC Norte"
+    }
+]

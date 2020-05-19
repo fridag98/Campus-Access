@@ -23,6 +23,10 @@ class SigUpViewController: UIViewController {
     
     var imgIdentificacion : UIImage!
     
+    override func viewDidDisappear(_ animated: Bool) {
+        self.removeSpinner()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         logo.image = UIImage(named: "logoPrueba")!
@@ -45,7 +49,6 @@ class SigUpViewController: UIViewController {
         if(imgIdentificacion==nil){
             return "Es necesario subir una identificación."
         }
-        
         //validar si la contraseña es segura
         if(!isPasswordValid(tfContrasena.text!)){
             return "La contraseña debe de tener al menos 8 caracteres, 1 número y 1 caracter especial."
@@ -65,14 +68,15 @@ class SigUpViewController: UIViewController {
         
         if(error != nil){
             showError(error!)
-        } else{
-            //crear usuario
+        } else{ //crear usuario
+            self.showSpinner()
             guard let imageData = imgIdentificacion.jpegData(compressionQuality: 0.4) else {
                 return
             }
             
             Auth.auth().createUser(withEmail: tfCorreo.text!, password: tfContrasena.text!) { (result, fail) in
                 if fail != nil {
+                    self.removeSpinner()
                     self.showError("No se pudo crear la cuenta")
                 } else{
                     let db = Firestore.firestore()
@@ -83,7 +87,7 @@ class SigUpViewController: UIViewController {
                         "identificacionURL": "",
                         "uid": result!.user.uid
                     ]
-                    print(result!.user.uid)
+                    //print(result!.user.uid)
                     let storageRef = Storage.storage().reference(forURL: "gs://campusaccess-863ef.appspot.com")
                     let storageIdenRef = storageRef.child("identificacion").child(result!.user.uid)
                                        
@@ -98,7 +102,7 @@ class SigUpViewController: UIViewController {
 
                         storageIdenRef.downloadURL(completion: {(url, error) in
                             if let metaImageUrl = url?.absoluteString {
-                                print(metaImageUrl)
+                                //print(metaImageUrl)
                                 dataUser["identificacionURL"] = metaImageUrl
                             }
                             let collection = UserModel.getCollection(fromEmail: result!.user.email!)
@@ -116,7 +120,6 @@ class SigUpViewController: UIViewController {
             }
         }
     }
-    
 
     @IBAction func unwindIdentificacion(unwindSegue : UIStoryboardSegue){
     }

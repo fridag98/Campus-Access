@@ -14,7 +14,7 @@ class CategoriasViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var mapaTec: MKMapView!
     @IBOutlet weak var categoryTableView: UITableView!
     
-    let categorias = ["Edificios","Restaurantes","Cafeterías","Zonas Comunes","Deportes","Baños","Estacionamientos","Accesos","Otros"]
+    let categorias = ["Edificios","Restaurantes","Cafeterías","Zonas Comunes","Deportes","Estacionamientos","Accesos","Otros"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

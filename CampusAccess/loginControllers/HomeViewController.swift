@@ -25,7 +25,6 @@ class HomeViewController: UIViewController {
         
         let user : UserModel = UserModel()
         
-        
         if let usr = Auth.auth().currentUser {
             user.uid = usr.uid
             user.email = usr.email
@@ -39,7 +38,7 @@ class HomeViewController: UIViewController {
         let docRef = db.collection(collection).whereField("uid", isEqualTo: user.uid ?? "")
         docRef.getDocuments { (querySnapshot, error) in
             if error != nil {
-                print(error)
+                print(error!)
                 return
             }
             else if querySnapshot!.documents.count != 1 {
@@ -59,7 +58,7 @@ class HomeViewController: UIViewController {
                 user.lastName = lastName as? String
                 user.isVisitor = isVisitor
                 
-                print(user)
+                //print(user)
                 if user.isVisitor {
                     self.accessButton.titleLabel?.lineBreakMode = .byWordWrapping;
                     self.accessButton.setTitle("ACCESO\nAL\nCAMPUS", for: .normal)
@@ -69,10 +68,7 @@ class HomeViewController: UIViewController {
                 }
                 self.profileSettingsButton.setTitle(user.firstName.uppercased(), for: .normal)
             }
-
         }
-        
-        
     }
     
     func logOut() {

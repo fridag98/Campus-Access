@@ -32,6 +32,8 @@
 		D6CC12242461C1F9004F3746 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC12232461C1F9004F3746 /* LoginViewController.swift */; };
 		D6CC12262461C217004F3746 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC12252461C217004F3746 /* HomeViewController.swift */; };
 		D6CC122C2461C4EF004F3746 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC122B2461C4EF004F3746 /* ViewController.swift */; };
+		D6DB3D922471E7D400DC671B /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DB3D912471E7D400DC671B /* Loading.swift */; };
+		D6DB3D9924721A1700DC671B /* Cafeterías.json in Resources */ = {isa = PBXBuildFile; fileRef = D6DB3D9824721A1700DC671B /* Cafeterías.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		D6CC12232461C1F9004F3746 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D6CC12252461C217004F3746 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D6CC122B2461C4EF004F3746 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D6DB3D912471E7D400DC671B /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		D6DB3D9824721A1700DC671B /* Cafeterías.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Cafeterías.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,19 +119,19 @@
 		D6C919E32440023E006E3B1E /* CampusAccess */ = {
 			isa = PBXGroup;
 			children = (
+				D6DB3D932471F0AF00DC671B /* Extensions */,
 				1095EFB0246A74D600E3F65D /* Models */,
+				D6CC12282461C2A0004F3746 /* JSONS */,
 				D6C919E42440023E006E3B1E /* AppDelegate.swift */,
 				D6C919E62440023E006E3B1E /* SceneDelegate.swift */,
 				D6C919EA2440023E006E3B1E /* Main.storyboard */,
-				D6BE0D3824687B3200269A82 /* IdentificacionViewController.swift */,
-				D6CC122B2461C4EF004F3746 /* ViewController.swift */,
-				D6CC12282461C2A0004F3746 /* JSONS */,
 				D6CC12272461C255004F3746 /* loginControllers */,
-				D6B308BB24413E5C009D4971 /* Lugar.swift */,
 				D6B308BD24413F3A009D4971 /* DataLoader.swift */,
+				D6B308BB24413E5C009D4971 /* Lugar.swift */,
 				D6B308BF244145AF009D4971 /* DetallesLugarViewController.swift */,
 				D6C919FA244005BB006E3B1E /* CategoriasViewController.swift */,
 				D6C919F824400305006E3B1E /* LugaresTableViewController.swift */,
+				D6BE0D3824687B3200269A82 /* IdentificacionViewController.swift */,
 				D6C919ED24400240006E3B1E /* Assets.xcassets */,
 				D6C919EF24400240006E3B1E /* LaunchScreen.storyboard */,
 				D61301BA2462561F009E48E7 /* GoogleService-Info.plist */,
@@ -139,6 +143,7 @@
 		D6CC12272461C255004F3746 /* loginControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D6CC122B2461C4EF004F3746 /* ViewController.swift */,
 				D6CC12212461C1E3004F3746 /* SigUpViewController.swift */,
 				D6CC12232461C1F9004F3746 /* LoginViewController.swift */,
 				D6CC12252461C217004F3746 /* HomeViewController.swift */,
@@ -155,9 +160,18 @@
 				D6B308B924413DD5009D4971 /* Restaurantes.json */,
 				D69F0CC72443B2D900498E34 /* Deportes.json */,
 				D69F0CC92443B31800498E34 /* Zonas Comunes.json */,
+				D6DB3D9824721A1700DC671B /* Cafeterías.json */,
 				D69F0CC52443B24E00498E34 /* Otros.json */,
 			);
 			path = JSONS;
+			sourceTree = "<group>";
+		};
+		D6DB3D932471F0AF00DC671B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D6DB3D912471E7D400DC671B /* Loading.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E79CDE6493CD6249BFD4D183 /* Pods */ = {
@@ -236,6 +250,7 @@
 				D6B308B624412244009D4971 /* Edificios.json in Resources */,
 				D69F0CC62443B24E00498E34 /* Otros.json in Resources */,
 				D6B308BA24413DD5009D4971 /* Restaurantes.json in Resources */,
+				D6DB3D9924721A1700DC671B /* Cafeterías.json in Resources */,
 				D6C919EC2440023E006E3B1E /* Main.storyboard in Resources */,
 				D69F0CCA2443B31800498E34 /* Zonas Comunes.json in Resources */,
 				D61301BB24625620009E48E7 /* GoogleService-Info.plist in Resources */,
@@ -314,6 +329,7 @@
 				D6CC12242461C1F9004F3746 /* LoginViewController.swift in Sources */,
 				D6B308BC24413E5C009D4971 /* Lugar.swift in Sources */,
 				D6B308BE24413F3A009D4971 /* DataLoader.swift in Sources */,
+				D6DB3D922471E7D400DC671B /* Loading.swift in Sources */,
 				D6C919E52440023E006E3B1E /* AppDelegate.swift in Sources */,
 				1095EFB4246A774E00E3F65D /* UserModel.swift in Sources */,
 				D6CC12222461C1E3004F3746 /* SigUpViewController.swift in Sources */,
