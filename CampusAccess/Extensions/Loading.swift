@@ -23,7 +23,6 @@ extension UIViewController {
         activityView?.addSubview(activity)
 
         self.view.addSubview(activityView!)
-        self.navigationController?.navigationBar.addSubview(activityView!)
         self.navigationController?.navigationBar.isUserInteractionEnabled = false
         self.view.isUserInteractionEnabled = false
     }
