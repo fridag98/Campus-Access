@@ -112,4 +112,15 @@ class HomeViewController: UIViewController {
         logOut()
     }
     
+    @IBAction func openAutoservicios(_ sender: UIButton) {
+        guard let url = URL(string: "https://apps.powerapps.com/play/68d78026-73d2-462a-8508-987a11fb1074?tenantId=c65a3ea6-0f7c-400b-8934-5a6dc1705645") else { return }
+        UIApplication.shared.open(url)
+    }
+    
+    @IBAction func openExpresoTec(_ sender: UIButton) {
+        guard let url = URL(string: "https://apps.powerapps.com/play/c69d30b8-398b-451e-8423-865c73116d6e?tenantId=c65a3ea6-0f7c-400b-8934-5a6dc1705645") else { return }
+        UIApplication.shared.open(url)
+    }
+    
+    
 }
