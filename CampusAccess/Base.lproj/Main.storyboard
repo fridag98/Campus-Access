@@ -361,6 +361,9 @@
                                 <state key="normal" title="CREDENCIAL">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonAcceso:" destination="sNg-KO-8nq" eventType="touchUpInside" id="CKb-zj-nfJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdU-sK-Z3o">
                                 <rect key="frame" x="34" y="360" width="163" height="163"/>
@@ -427,6 +430,7 @@
                         <outlet property="digitalServicesButton" destination="F66-xK-aEW" id="QoU-ae-WhG"/>
                         <outlet property="expresoTecButton" destination="SVr-MM-b6L" id="fcF-im-WFK"/>
                         <outlet property="profileSettingsButton" destination="YiH-8c-sQR" id="4LU-LV-xwY"/>
+                        <segue destination="KZk-tP-0Ic" kind="presentation" identifier="segueVisitas" modalPresentationStyle="fullScreen" id="UmT-D1-4Iz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vaP-j9-gpQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -629,6 +633,268 @@
             </objects>
             <point key="canvasLocation" x="-703" y="-610"/>
         </scene>
+        <!--Visitas-->
+        <scene sceneID="Pdr-Hd-31t">
+            <objects>
+                <viewController id="Ns7-Kp-1CD" customClass="ListaVisitasViewController" customModule="CampusAccess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ncr-cC-Eml">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdx-G6-PYZ">
+                                <rect key="frame" x="200" y="133" width="183" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="183" id="cS4-7h-L7I"/>
+                                    <constraint firstAttribute="height" constant="50" id="hND-dz-4G7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Nueva Visita"/>
+                                <connections>
+                                    <segue destination="fh7-82-uh0" kind="show" identifier="segueCrearVisita" id="3vl-Th-8Ic"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dGu-gu-Vl1">
+                                <rect key="frame" x="0.0" y="285" width="414" height="577"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="idCell" rowHeight="87" id="deF-Ea-8vG" customClass="CustomTableViewCell" customModule="CampusAccess" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="87"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="deF-Ea-8vG" id="6Xl-Yo-tia">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="87"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registro" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMO-79-OqM">
+                                                    <rect key="frame" x="13" y="16" width="370" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="UdT-DB-g6j"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoo-YR-fjb">
+                                                    <rect key="frame" x="13" y="57" width="370" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="YGF-nO-8ck"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="BMO-79-OqM" secondAttribute="trailing" id="4dl-Yg-zeb"/>
+                                                <constraint firstItem="zoo-YR-fjb" firstAttribute="leading" secondItem="6Xl-Yo-tia" secondAttribute="leading" constant="13" id="C96-Dv-A3Y"/>
+                                                <constraint firstItem="zoo-YR-fjb" firstAttribute="top" secondItem="BMO-79-OqM" secondAttribute="bottom" constant="16" id="I7a-Xz-jbU"/>
+                                                <constraint firstItem="BMO-79-OqM" firstAttribute="top" secondItem="6Xl-Yo-tia" secondAttribute="top" constant="16" id="S3g-la-6PX"/>
+                                                <constraint firstItem="BMO-79-OqM" firstAttribute="leading" secondItem="6Xl-Yo-tia" secondAttribute="leading" constant="13" id="bCx-dK-gzK"/>
+                                                <constraint firstAttribute="trailing" secondItem="zoo-YR-fjb" secondAttribute="trailing" id="sH1-Tc-Qht"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lbFecha" destination="zoo-YR-fjb" id="h7P-L7-M52"/>
+                                            <outlet property="lbRegistro" destination="BMO-79-OqM" id="FKZ-lq-h0d"/>
+                                            <segue destination="Eb8-Cg-qcD" kind="show" identifier="segueDetallesVisita" id="79c-cJ-m5b"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ns7-Kp-1CD" id="L1T-UH-Wpq"/>
+                                    <outlet property="delegate" destination="Ns7-Kp-1CD" id="yeh-f2-6wU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bdx-G6-PYZ" firstAttribute="top" secondItem="gJQ-gw-93k" secondAttribute="top" constant="45" id="0CB-7O-Ecs"/>
+                            <constraint firstItem="dGu-gu-Vl1" firstAttribute="leading" secondItem="gJQ-gw-93k" secondAttribute="leading" id="JX9-hk-RRO"/>
+                            <constraint firstItem="dGu-gu-Vl1" firstAttribute="top" secondItem="bdx-G6-PYZ" secondAttribute="bottom" constant="102" id="LDa-dd-Ya0"/>
+                            <constraint firstItem="dGu-gu-Vl1" firstAttribute="trailing" secondItem="gJQ-gw-93k" secondAttribute="trailing" id="RI6-VC-2cu"/>
+                            <constraint firstItem="gJQ-gw-93k" firstAttribute="trailing" secondItem="bdx-G6-PYZ" secondAttribute="trailing" constant="31" id="VZy-lD-drT"/>
+                            <constraint firstItem="gJQ-gw-93k" firstAttribute="bottom" secondItem="dGu-gu-Vl1" secondAttribute="bottom" id="h3C-Ga-1ei"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gJQ-gw-93k"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Visitas" id="wcm-rw-sSy">
+                        <barButtonItem key="leftBarButtonItem" title="Regresar" id="mMM-bn-Ver">
+                            <connections>
+                                <action selector="btnRegresar:" destination="Ns7-Kp-1CD" id="nwl-qe-n59"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnAgregar" destination="bdx-G6-PYZ" id="IKp-GB-DUB"/>
+                        <outlet property="tableView" destination="dGu-gu-Vl1" id="F95-Zd-ndd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eIL-tK-bDv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2442.0289855072465" y="-610.04464285714278"/>
+        </scene>
+        <!--Nueva Visita-->
+        <scene sceneID="5Ae-qS-Q91">
+            <objects>
+                <viewController id="fh7-82-uh0" customClass="RegistroVisitasViewController" customModule="CampusAccess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rXr-Cr-Cjh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BzZ-Yh-KXQ">
+                                <rect key="frame" x="40" y="208" width="334" height="330"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre de esta nueva visita" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Ak-SX-Thk">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="LO9-Nr-nee"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Motivo de la visita" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M1W-bt-eue">
+                                        <rect key="frame" x="0.0" y="70" width="334" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fecha de la visita" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UCn-IG-jco">
+                                        <rect key="frame" x="0.0" y="140" width="334" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hora de la visita" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e9Y-L8-5XJ">
+                                        <rect key="frame" x="0.0" y="210" width="334" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Colaborador del Tec responsable de la visita" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Hh-j3-tj3">
+                                        <rect key="frame" x="0.0" y="280" width="334" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="M1W-bt-eue" firstAttribute="height" secondItem="3Ak-SX-Thk" secondAttribute="height" id="LHg-0m-YKH"/>
+                                    <constraint firstItem="e9Y-L8-5XJ" firstAttribute="height" secondItem="3Ak-SX-Thk" secondAttribute="height" id="QFf-w8-ypp"/>
+                                    <constraint firstItem="5Hh-j3-tj3" firstAttribute="height" secondItem="3Ak-SX-Thk" secondAttribute="height" id="kSZ-ej-4rP"/>
+                                    <constraint firstItem="UCn-IG-jco" firstAttribute="height" secondItem="3Ak-SX-Thk" secondAttribute="height" id="zEj-Pb-ZNa"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGY-UU-oFw">
+                                <rect key="frame" x="120" y="608" width="174" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Nmi-zI-F8k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Registrar Visita"/>
+                                <connections>
+                                    <action selector="createRegister:" destination="fh7-82-uh0" eventType="touchUpInside" id="9kk-6U-zlz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PxY-ke-zBs" firstAttribute="trailing" secondItem="BzZ-Yh-KXQ" secondAttribute="trailing" constant="40" id="3V4-rh-taW"/>
+                            <constraint firstItem="EGY-UU-oFw" firstAttribute="leading" secondItem="PxY-ke-zBs" secondAttribute="leading" constant="120" id="6uF-86-gn8"/>
+                            <constraint firstItem="EGY-UU-oFw" firstAttribute="top" secondItem="BzZ-Yh-KXQ" secondAttribute="bottom" constant="70" id="AQO-KH-msb"/>
+                            <constraint firstItem="BzZ-Yh-KXQ" firstAttribute="top" secondItem="PxY-ke-zBs" secondAttribute="top" constant="120" id="QRg-P8-Ns1"/>
+                            <constraint firstItem="PxY-ke-zBs" firstAttribute="trailing" secondItem="EGY-UU-oFw" secondAttribute="trailing" constant="120" id="trM-GE-R62"/>
+                            <constraint firstItem="BzZ-Yh-KXQ" firstAttribute="leading" secondItem="PxY-ke-zBs" secondAttribute="leading" constant="40" id="x3Z-dp-eaY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PxY-ke-zBs"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nueva Visita" id="vDo-59-xlM">
+                        <barButtonItem key="backBarButtonItem" title="Regresar" id="HZi-dI-v1Y"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnRegistrar" destination="EGY-UU-oFw" id="Crt-Ki-IT5"/>
+                        <outlet property="tfFecha" destination="UCn-IG-jco" id="GcF-Tb-F9L"/>
+                        <outlet property="tfHora" destination="e9Y-L8-5XJ" id="dZ4-iY-KJA"/>
+                        <outlet property="tfMotivoVisita" destination="M1W-bt-eue" id="bIu-UK-due"/>
+                        <outlet property="tfNombreVisita" destination="3Ak-SX-Thk" id="Rx7-FM-Epw"/>
+                        <outlet property="tfResponsable" destination="5Hh-j3-tj3" id="MkS-pn-ZgC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fuK-V7-kC4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3192.753623188406" y="-1381.4732142857142"/>
+        </scene>
+        <!--Detalles Visita View Controller-->
+        <scene sceneID="qAv-Hn-q8V">
+            <objects>
+                <viewController id="Eb8-Cg-qcD" customClass="DetallesVisitaViewController" customModule="CampusAccess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hsE-3d-LM2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Ei3-pQ-gcU">
+                                <rect key="frame" x="40" y="308" width="334" height="226.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de Usuario" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fE5-yx-Aht">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="wHS-r3-FUy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de Visita" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxD-FO-6Ox">
+                                        <rect key="frame" x="0.0" y="65" width="334" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hora de la Visita" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ul-Ha-BQg">
+                                        <rect key="frame" x="0.0" y="130" width="334" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motivo de la Visita" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iqv-Gt-gCS">
+                                        <rect key="frame" x="0.0" y="195" width="334" height="31.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="6Ul-Ha-BQg" firstAttribute="height" secondItem="fE5-yx-Aht" secondAttribute="height" id="Pxs-Z6-7hq"/>
+                                    <constraint firstItem="dxD-FO-6Ox" firstAttribute="height" secondItem="fE5-yx-Aht" secondAttribute="height" id="yYV-wv-jlM"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qrcode" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JPF-IO-aMo">
+                                <rect key="frame" x="40" y="579" width="334" height="267"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ei3-pQ-gcU" firstAttribute="top" secondItem="tdO-0R-JQO" secondAttribute="top" constant="220" id="8fV-pZ-lZy"/>
+                            <constraint firstItem="tdO-0R-JQO" firstAttribute="trailing" secondItem="Ei3-pQ-gcU" secondAttribute="trailing" constant="40" id="KZq-fF-Rgc"/>
+                            <constraint firstItem="Ei3-pQ-gcU" firstAttribute="leading" secondItem="tdO-0R-JQO" secondAttribute="leading" constant="40" id="X26-tJ-5Ky"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tdO-0R-JQO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ddi-UB-Fh5">
+                        <barButtonItem key="backBarButtonItem" title="Regresar" id="PyU-Nv-bKk"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imgQR" destination="JPF-IO-aMo" id="EHJ-vF-aDO"/>
+                        <outlet property="lbFecha" destination="dxD-FO-6Ox" id="MgA-HJ-S2x"/>
+                        <outlet property="lbHora" destination="6Ul-Ha-BQg" id="vRM-AF-vzw"/>
+                        <outlet property="lbMotivo" destination="Iqv-Gt-gCS" id="W37-SY-gTg"/>
+                        <outlet property="lbUsuario" destination="fE5-yx-Aht" id="lAa-Tt-zbr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CTc-Iw-OvB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3640.579710144928" y="-610.04464285714278"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="3bw-8D-cya">
             <objects>
@@ -666,6 +932,24 @@
             </objects>
             <point key="canvasLocation" x="-3847.826086956522" y="89.732142857142847"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Cak-Wd-CDu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KZk-tP-0Ic" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wWV-hi-ReI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ns7-Kp-1CD" kind="relationship" relationship="rootViewController" id="51w-vW-Lzk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TRo-Rp-CKt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1531.8840579710145" y="-610.04464285714278"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="b3u-Oc-l0V"/>
@@ -673,5 +957,6 @@
     <resources>
         <image name="addPhoto" width="512" height="512"/>
         <image name="camera.fill" catalog="system" width="128" height="96"/>
+        <image name="qrcode" catalog="system" width="128" height="114"/>
     </resources>
 </document>

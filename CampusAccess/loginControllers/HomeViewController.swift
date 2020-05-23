@@ -18,12 +18,14 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var digitalServicesButton: UIButton!
     @IBOutlet weak var expresoTecButton: UIButton!
     
+    let user : UserModel = UserModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         btnLogOut.layer.cornerRadius = 25.0
         self.navigationController?.navigationBar.isHidden = true
         
-        let user : UserModel = UserModel()
+       // let user : UserModel = UserModel()
         
         if let usr = Auth.auth().currentUser {
             user.uid = usr.uid
@@ -52,22 +54,39 @@ class HomeViewController: UIViewController {
                 // TODO: - Esto puede tener inconsistencias si se hace login en multiples celulares, super edge case que no creo que tenga impacto para el alcance del proyecto, pero bueno tomarlo en cuenta por si acaso
                 // TODO: Agregarlo al documento de usuario en firebase
                 guard let identificacionURL = dataDescription?["identificacionURL"] else { return }
-                let isVisitor = UserModel.isUserVisitor(fromEmail: user.email)
+                let isVisitor = UserModel.isUserVisitor(fromEmail: self.user.email)
                 
-                user.firstName = firstName as? String
-                user.lastName = lastName as? String
-                user.isVisitor = isVisitor
+                self.user.firstName = firstName as? String
+                self.user.lastName = lastName as? String
+                self.user.isVisitor = isVisitor
                 
                 //print(user)
-                if user.isVisitor {
+                if self.user.isVisitor {
                     self.accessButton.titleLabel?.lineBreakMode = .byWordWrapping;
                     self.accessButton.setTitle("ACCESO\nAL\nCAMPUS", for: .normal)
                     self.accessButton.titleLabel?.textAlignment = .center
                     self.digitalServicesButton.isHidden = true
                     self.expresoTecButton.isHidden = true
                 }
-                self.profileSettingsButton.setTitle(user.firstName.uppercased(), for: .normal)
+                self.profileSettingsButton.setTitle(self.user.firstName.uppercased(), for: .normal)
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueVisitas" {
+            let navigationControllerView = segue.destination as! UINavigationController
+            let vistaRegistro = navigationControllerView.topViewController as! ListaVisitasViewController
+            vistaRegistro.user = self.user
+        }
+    }
+    
+    @IBAction func buttonAcceso(_ sender: UIButton) {
+        if user.isVisitor {
+            self.performSegue(withIdentifier: "segueVisitas", sender: nil)
+        }
+        else {
+            print("segue del alumno")
         }
     }
     
