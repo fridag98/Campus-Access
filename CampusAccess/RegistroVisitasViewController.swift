@@ -48,10 +48,13 @@ class RegistroVisitasViewController: UIViewController, UITextFieldDelegate {
     
     //assign toolbar and datePickers
     func createDatePicker() {
+        let loc = Locale(identifier: "es_MX")
+        self.datePickerDate.locale = loc
         tfFecha.inputAccessoryView = createToolBar()
         tfFecha.inputView = datePickerDate
     }
 
+    //assign date and hour in a specific format
     @objc func donePressed() {
         let formatter = DateFormatter()
         
@@ -76,8 +79,8 @@ class RegistroVisitasViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func createRegister(_ sender: UIButton) {
-        if let nombre = tfNombreVisita.text, let motivo = tfMotivoVisita.text, tfHora.text != "" {
-            let nuevoRegistro = VisitModel(name: nombre, motive: motivo, responsable: tfResponsable.text!, date: datePickerDate.date)
+        if tfNombreVisita.text != "", tfMotivoVisita.text != "", tfHora.text != "" {
+            let nuevoRegistro = VisitModel(name: tfNombreVisita.text!, motive: tfMotivoVisita.text!, responsable: tfResponsable.text!, date: datePickerDate.date)
             delegate.agregaRegistro(registro: nuevoRegistro)
             navigationController?.popViewController(animated: true)
         }

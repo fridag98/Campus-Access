@@ -84,8 +84,7 @@ class HomeViewController: UIViewController {
     @IBAction func buttonAcceso(_ sender: UIButton) {
         if user.isVisitor {
             self.performSegue(withIdentifier: "segueVisitas", sender: nil)
-        }
-        else {
+        } else {
             print("segue del alumno")
         }
     }

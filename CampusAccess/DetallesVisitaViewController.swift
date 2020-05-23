@@ -20,25 +20,27 @@ class DetallesVisitaViewController: UIViewController {
     var visita: VisitModel!
     var nombreUsuario : String!
 
+    //display visit's information on specific format
     override func viewDidLoad() {
         super.viewDidLoad()
         lbUsuario.text = nombreUsuario
 
         let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "es_MX")
         formatter.dateStyle = .full
         formatter.timeStyle = .none
         lbFecha.text = formatter.string(from: visita.date)
-        let today = formatter.string(from: Date()) //current date
 
+        //show qr when date equals to current date
+        if lbFecha.text != formatter.string(from: Date()) {
+            imgQR.isHidden = true
+        }
+        
         formatter.locale = Locale(identifier: "en_US")
         formatter.dateStyle = .none
         formatter.timeStyle = .short
         lbHora.text = formatter.string(from: visita.date)
         
         lbMotivo.text = visita.motive
-        
-        if lbFecha.text != today {
-            imgQR.isHidden = true
-        }
     }
 }

@@ -32,6 +32,7 @@ class ListaVisitasViewController: UIViewController, UITableViewDelegate, UITable
         return formatter
     }
     
+    //bring from Firebase user's visits
     func downloadVisits() {
         let docRef = db.collection("visitas").whereField("uid", isEqualTo: user.uid ?? "")
         docRef.getDocuments() { (querySnapshot, error) in
@@ -56,6 +57,9 @@ class ListaVisitasViewController: UIViewController, UITableViewDelegate, UITable
         downloadVisits()
     }
     
+    // MARK: - Table view settings
+
+    //show visits on descending date order
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         arrVisitas = arrVisitas.sorted(by: {
             $0.date.compare($1.date) == .orderedDescending
@@ -78,6 +82,7 @@ class ListaVisitasViewController: UIViewController, UITableViewDelegate, UITable
         return celda
     }
     
+    //return bar button
     @IBAction func btnRegresar(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
@@ -94,10 +99,8 @@ class ListaVisitasViewController: UIViewController, UITableViewDelegate, UITable
         }
     }
     
-    func agregaRegistro (registro: VisitModel) {
-        arrVisitas.append(registro)
-        tableView.reloadData()
-        
+    //add new user's visit to Firebase
+    func agregaRegistro (registro: VisitModel) {        
         let dataVisit: Dictionary<String, String> = [
             "fecha": dateFormatter().string(from: registro.date),
             "motivo": registro.motive!,
@@ -108,6 +111,9 @@ class ListaVisitasViewController: UIViewController, UITableViewDelegate, UITable
         db.collection("visitas").addDocument(data: dataVisit) { (error) in
             if error != nil {
                 print("No se guardó la visita del usuario")
+            } else {
+                self.arrVisitas.append(registro)
+                self.tableView.reloadData()
             }
         }
     }
