@@ -3,79 +3,105 @@
       "nombre" : "Starbucks CIAP",
       "latitude" : 25.652179,
       "longitude" : -100.290019,
-      "description" : "Café, panadería y más"
+      "description" : "Café, panadería y más",
+      "elevadores" : false,
+      "ambulatorios" : false
     },
     {
       "nombre" : "Starbucks El Borrego",
       "latitude" : 25.649352,
       "longitude" : -100.290297,
-      "description" : "Café, panadería y más"
+      "description" : "Café, panadería y más",
+      "elevadores" : false,
+      "ambulatorios" : false
     },
     {
       "nombre" : "Starbucks Biblioteca",
       "latitude" : 25.650231,
       "longitude" : -100.289559,
-      "description" : "Café, panadería y más"
+      "description" : "Café, panadería y más",
+      "elevadores" : false,
+      "ambulatorios" : false
     },
 
     {
       "nombre" : "Tim Hortons",
       "latitude" : 25.650310,
       "longitude" : -100.289807,
-      "description" : "Café, panadería y más"
+      "description" : "Café, panadería y más",
+      "elevadores" : false,
+      "ambulatorios" : false
     },
     {
       "nombre" : "Panem",
       "latitude" : 25.651442,
       "longitude" : -100.289912,
-      "description" : "Café, panadería y más"
+      "description" : "Café, panadería y más",
+      "elevadores" : false,
+      "ambulatorios" : false
     },
     {
        "nombre" : "Nectarworks",
        "latitude" : 25.650499,
        "longitude" : -100.289549,
-       "description" : "Comida saludable"
+       "description" : "Comida saludable",
+       "elevadores" : false,
+       "ambulatorios" : false
      },
      {
        "nombre" : "Señor Latino",
        "latitude" : 25.650490,
        "longitude" : -100.289549,
-       "description" : "Comida casera"
+       "description" : "Comida casera",
+       "elevadores" : false,
+       "ambulatorios" : false
      },
      {
        "nombre" : "Doña Tota",
        "latitude" : 25.651340,
        "longitude" : -100.288822,
-       "description" : "Gorditas de guisos"
+       "description" : "Gorditas de guisos",
+       "elevadores" : false,
+       "ambulatorios" : false
      },
      {
        "nombre" : "Johnny Rockets",
        "latitude" : 25.651502,
        "longitude" : -100.288985,
-       "description" : "Hamburguesas, sándwiches, malteadas y más"
+       "description" : "Hamburguesas, sándwiches, malteadas y más",
+       "elevadores" : false,
+       "ambulatorios" : false
      },
      {
       "nombre" : "Subway",
       "latitude" : 25.651340,
       "longitude" : -100.288856,
-      "description" : "Sándwiches"
+      "description" : "Sándwiches",
+      "elevadores" : false,
+      "ambulatorios" : false
      },
      {
        "nombre" : "Papa Johns",
        "latitude" : 25.651465,
        "longitude" : -100.288958,
-       "description" : "Pizzería"
+       "description" : "Pizzería",
+       "elevadores" : false,
+       "ambulatorios" : false
      },
      {
        "nombre" : "Chilaquiles Tec",
        "latitude" : 25.651465,
        "longitude" : -100.288895,
-       "description" : "Chilaquiles estilo Tec"
+       "description" : "Chilaquiles estilo Tec",
+       "elevadores" : false,
+       "ambulatorios" : false
      },
      {
        "nombre" : "Food Box",
        "latitude" : 25.649626,
        "longitude" : -100.290382,
-       "description" : "Hamburguesas"
+       "description" : "Hamburguesas",
+       "elevadores" : false,
+       "ambulatorios" : false
      }
 ]

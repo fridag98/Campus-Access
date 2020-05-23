@@ -3,61 +3,71 @@
         "nombre" : "Aulas IV",
         "latitude" : 25.6487471,
         "longitude" : -100.2891026,
-        "description" : "Acceso Aulas IV"
+        "description" : "Acceso Aulas IV",
+        "ambulatorios" : false
     },
     {
         "nombre" : "Centro de Congresos",
         "latitude" : 25.6480758,
         "longitude" : -100.2899620,
-        "description" : "Acceso Centro de Congresos"
+        "description" : "Acceso Centro de Congresos",
+        "ambulatorios" : false
     },
     {
         "nombre" : "El Borrego",
         "latitude" : 25.6490052,
         "longitude" : -100.2904987,
-        "description" : "Acceso El Borrego"
+        "description" : "Acceso El Borrego",
+        "ambulatorios" : false
     },
     {
         "nombre" : "Rectoria",
         "latitude" : 25.6514267,
         "longitude" : -100.2920122,
-        "description" : "Acceso Rectoria"
+        "description" : "Acceso Rectoria",
+        "ambulatorios" : false
     },
     {
         "nombre" : "Centro de Reflexion",
         "latitude" : 25.6525799,
         "longitude" : -100.2908338,
-        "description" : "Acceso Centro de Reflexion"
+        "description" : "Acceso Centro de Reflexion",
+        "ambulatorios" : false
     },
     {
         "nombre" : "CIAP",
         "latitude" : 25.6531482,
         "longitude" : -100.2901725,
-        "description" : "Acceso CIAP"
+        "description" : "Acceso CIAP",
+        "ambulatorios" : false
     },
     {
         "nombre" : "Centro de Congresos",
         "latitude" : 25.6480758,
         "longitude" : -100.2899620,
-        "description" : "Acceso Centro de Congresos"
+        "description" : "Acceso Centro de Congresos",
+        "ambulatorios" : false
     },
     {
         "nombre" : "E1",
         "latitude" : 25.6525444,
         "longitude" : -100.2887429,
-        "description" : "Acceso E1"
+        "description" : "Acceso E1",
+        "ambulatorios" : false
     },
     {
         "nombre" : "Centro de Congresos",
         "latitude" : 25.6480758,
         "longitude" : -100.2899620,
-        "description" : "Acceso Centro de Congresos"
+        "description" : "Acceso Centro de Congresos",
+        "ambulatorios" : false
     },
     {
         "nombre" : "Gimnasio",
         "latitude" : 25.6511683,
         "longitude" : -100.2871389,
-        "description" : "Acceso Gimnasio"
+        "description" : "Acceso Gimnasio",
+        "ambulatorios" : false
     }
 ]
 
