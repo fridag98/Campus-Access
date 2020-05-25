@@ -84,7 +84,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baños" translatesAutoresizingMaskIntoConstraints="NO" id="iTw-NT-wIK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toilet" translatesAutoresizingMaskIntoConstraints="NO" id="iTw-NT-wIK">
                                 <rect key="frame" x="238" y="701" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="5fj-mf-hJb"/>
@@ -93,7 +93,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZM-RE-kQI">
                                 <rect key="frame" x="40" y="601" width="334" height="150"/>
-                                <color key="backgroundColor" red="0.71950686584023305" green="0.75791293461860465" blue="0.36624081822984178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.63487802917218616" green="0.71230973694418598" blue="0.26497603704113987" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Esta aula cuenta con un elevador exclusivo para personas con discapacidad que requiere tarjeta. Para obtenerla, acudir a la  Direccón de Bienestar y Consejería</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -845,7 +845,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hora de la visita" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e9Y-L8-5XJ">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hora de la visita" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e9Y-L8-5XJ">
                                         <rect key="frame" x="0.0" y="210" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -913,7 +913,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Ei3-pQ-gcU">
-                                <rect key="frame" x="40" y="288" width="334" height="226.5"/>
+                                <rect key="frame" x="40" y="188" width="334" height="226.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de Usuario" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fE5-yx-Aht">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
@@ -949,14 +949,14 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qrcode" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JPF-IO-aMo">
-                                <rect key="frame" x="40" y="579" width="334" height="267"/>
+                                <rect key="frame" x="40" y="477" width="334" height="267"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Ei3-pQ-gcU" firstAttribute="top" secondItem="tdO-0R-JQO" secondAttribute="top" constant="200" id="8fV-pZ-lZy"/>
+                            <constraint firstItem="Ei3-pQ-gcU" firstAttribute="top" secondItem="tdO-0R-JQO" secondAttribute="top" constant="100" id="8fV-pZ-lZy"/>
                             <constraint firstItem="tdO-0R-JQO" firstAttribute="trailing" secondItem="Ei3-pQ-gcU" secondAttribute="trailing" constant="40" id="KZq-fF-Rgc"/>
                             <constraint firstItem="Ei3-pQ-gcU" firstAttribute="leading" secondItem="tdO-0R-JQO" secondAttribute="leading" constant="40" id="X26-tJ-5Ky"/>
                         </constraints>
@@ -1038,9 +1038,9 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="addPhoto" width="512" height="512"/>
-        <image name="baños" width="225" height="224"/>
         <image name="camera.fill" catalog="system" width="128" height="96"/>
         <image name="elevator" width="200" height="200"/>
         <image name="qrcode" catalog="system" width="128" height="114"/>
+        <image name="toilet" width="540" height="540"/>
     </resources>
 </document>

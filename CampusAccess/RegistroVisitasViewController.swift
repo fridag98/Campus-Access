@@ -23,13 +23,15 @@ class RegistroVisitasViewController: UIViewController, UITextFieldDelegate {
     
     var delegate : administraRegistros!
     var visita : VisitModel!
-    let datePickerDate = UIDatePicker()
+    let (datePickerDate, hourPicker) = (UIDatePicker(), UIDatePicker())
 
     override func viewDidLoad() {
         super.viewDidLoad()
         btnRegistrar.layer.cornerRadius = 25.0
         createDatePicker()
+        createHourPicker()
         self.tfFecha.delegate = self
+        self.tfHora.delegate = self
     }
     
     //prevent from writing on the date field
@@ -38,36 +40,55 @@ class RegistroVisitasViewController: UIViewController, UITextFieldDelegate {
     }
     
     //create toolbal and bar button
-    func createToolBar() -> UIToolbar {
+    func createDateToolBar() -> UIToolbar {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneDatePressed))
+        toolbar.setItems([doneButton], animated: true)
+        return toolbar
+    }
+
+    func createHourToolBar() -> UIToolbar {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneHourPressed))
         toolbar.setItems([doneButton], animated: true)
         return toolbar
     }
     
     //assign toolbar and datePickers
     func createDatePicker() {
-        let loc = Locale(identifier: "es_MX")
-        self.datePickerDate.locale = loc
-        tfFecha.inputAccessoryView = createToolBar()
+        datePickerDate.datePickerMode = .date
+        datePickerDate.locale = Locale(identifier: "es_MX")
+        tfFecha.inputAccessoryView = createDateToolBar()
         tfFecha.inputView = datePickerDate
     }
 
+    func createHourPicker() {
+        hourPicker.datePickerMode = .time
+        hourPicker.locale = Locale(identifier: "en_US")
+        tfHora.inputAccessoryView = createHourToolBar()
+        tfHora.inputView = hourPicker
+    }
+
     //assign date and hour in a specific format
-    @objc func donePressed() {
+    @objc func doneDatePressed() {
         let formatter = DateFormatter()
-        
         formatter.locale = Locale(identifier: "es_MX")
         formatter.dateStyle = .full
         formatter.timeStyle = .none
         tfFecha.text = formatter.string(from: datePickerDate.date)
-        
+        print(datePickerDate.date)
+        self.view.endEditing(true)
+    }
+
+    @objc func doneHourPressed() {
+        let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US")
         formatter.dateStyle = .none
         formatter.timeStyle = .short
-        tfHora.text = formatter.string(from: datePickerDate.date)
-        
+        tfHora.text = formatter.string(from: hourPicker.date)
+        print(hourPicker.date)
         self.view.endEditing(true)
     }
     
@@ -77,10 +98,22 @@ class RegistroVisitasViewController: UIViewController, UITextFieldDelegate {
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
+
+    func convertStringToDate() -> Date {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let date = formatter.string(from: datePickerDate.date)
+        formatter.dateFormat = "HH:mm"
+        let hour = formatter.string(from: hourPicker.date)
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let stringDate = date + " " + hour
+        let dateTime = formatter.date(from: stringDate)!
+        return dateTime
+    }
     
     @IBAction func createRegister(_ sender: UIButton) {
         if tfNombreVisita.text != "", tfMotivoVisita.text != "", tfHora.text != "" {
-            let nuevoRegistro = VisitModel(name: tfNombreVisita.text!, motive: tfMotivoVisita.text!, responsable: tfResponsable.text!, date: datePickerDate.date)
+            let nuevoRegistro = VisitModel(name: tfNombreVisita.text!, motive: tfMotivoVisita.text!, responsable: tfResponsable.text!, date: convertStringToDate())
             delegate.agregaRegistro(registro: nuevoRegistro)
             navigationController?.popViewController(animated: true)
         }

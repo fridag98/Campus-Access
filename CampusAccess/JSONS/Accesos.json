@@ -4,6 +4,7 @@
         "latitude" : 25.6487471,
         "longitude" : -100.2891026,
         "description" : "Acceso Aulas IV",
+        "elevadores" : false,
         "ambulatorios" : false
     },
     {
@@ -11,6 +12,7 @@
         "latitude" : 25.6480758,
         "longitude" : -100.2899620,
         "description" : "Acceso Centro de Congresos",
+        "elevadores" : false,
         "ambulatorios" : false
     },
     {
@@ -18,6 +20,7 @@
         "latitude" : 25.6490052,
         "longitude" : -100.2904987,
         "description" : "Acceso El Borrego",
+        "elevadores" : false,
         "ambulatorios" : false
     },
     {
@@ -25,6 +28,7 @@
         "latitude" : 25.6514267,
         "longitude" : -100.2920122,
         "description" : "Acceso Rectoria",
+        "elevadores" : false,
         "ambulatorios" : false
     },
     {
@@ -32,6 +36,7 @@
         "latitude" : 25.6525799,
         "longitude" : -100.2908338,
         "description" : "Acceso Centro de Reflexion",
+        "elevadores" : false,
         "ambulatorios" : false
     },
     {
@@ -39,6 +44,7 @@
         "latitude" : 25.6531482,
         "longitude" : -100.2901725,
         "description" : "Acceso CIAP",
+        "elevadores" : false,
         "ambulatorios" : false
     },
     {
@@ -46,6 +52,7 @@
         "latitude" : 25.6480758,
         "longitude" : -100.2899620,
         "description" : "Acceso Centro de Congresos",
+        "elevadores" : false,
         "ambulatorios" : false
     },
     {
@@ -53,6 +60,7 @@
         "latitude" : 25.6525444,
         "longitude" : -100.2887429,
         "description" : "Acceso E1",
+        "elevadores" : false,
         "ambulatorios" : false
     },
     {
@@ -60,6 +68,7 @@
         "latitude" : 25.6480758,
         "longitude" : -100.2899620,
         "description" : "Acceso Centro de Congresos",
+        "elevadores" : false,
         "ambulatorios" : false
     },
     {
@@ -67,6 +76,7 @@
         "latitude" : 25.6511683,
         "longitude" : -100.2871389,
         "description" : "Acceso Gimnasio",
+        "elevadores" : false,
         "ambulatorios" : false
     }
 ]

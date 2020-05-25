@@ -34,9 +34,11 @@ class ListaVisitasViewController: UIViewController, UITableViewDelegate, UITable
     
     //bring from Firebase user's visits
     func downloadVisits() {
+        self.showSpinner()
         let docRef = db.collection("visitas").whereField("uid", isEqualTo: user.uid ?? "")
         docRef.getDocuments() { (querySnapshot, error) in
             if error != nil {
+                self.removeSpinner()
                 return
             } else {
                 for document in querySnapshot!.documents {
@@ -45,13 +47,13 @@ class ListaVisitasViewController: UIViewController, UITableViewDelegate, UITable
                    // print("\(document.documentID) => \(document.data()")
                 }
                 self.tableView.reloadData()
+                self.removeSpinner()
             }
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         btnAgregar.layer.cornerRadius = 25.0
         tableView.tableFooterView = UIView()
         downloadVisits()
@@ -112,8 +114,10 @@ class ListaVisitasViewController: UIViewController, UITableViewDelegate, UITable
             if error != nil {
                 print("No se guardó la visita del usuario")
             } else {
+                self.showSpinner()
                 self.arrVisitas.append(registro)
                 self.tableView.reloadData()
+                self.removeSpinner()
             }
         }
     }
