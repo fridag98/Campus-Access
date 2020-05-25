@@ -3,114 +3,152 @@
         "nombre" : "E1",
         "latitude" : 25.6531658,
         "longitude" : -100.2879154,
-        "description" : "Estacionamiento 1"
+        "description" : "Estacionamiento 1",
+        "elevadores" : false,
+        "ambulatorios" : false
     },
     {
         "nombre" : "E4",
         "latitude" : 25.6512572,
         "longitude" : -100.2852460,
-        "description" : "Estacionamiento 4 Auditorio Luiz Elizondo"
+        "description" : "Estacionamiento 4 Auditorio Luiz Elizondo",
+        "elevadores" : false,
+        "ambulatorios" : false
     },
     {
         "nombre" : "Profesores Sur",
         "latitude" : 25.6511333,
         "longitude" : -100.2863108,
-        "description" : "Estacionamiento Profesores Sur"
+        "description" : "Estacionamiento Profesores Sur",
+        "elevadores" : false,
+        "ambulatorios" : false
     },
     {
         "nombre" : "Alumnos Norte",
         "latitude" : 25.6526372,
         "longitude" : -100.2847256,
-        "description" : "Estacionamiento Alumnos Norte"
+        "description" : "Estacionamiento Alumnos Norte",
+        "elevadores" : false,
+        "ambulatorios" : false
     },
     {
         "nombre" : "Edificio IV",
         "latitude" : 25.6494924,
         "longitude" : -100.2897816,
-        "description" : "Estacionamiento Edificio IV"
+        "description" : "Estacionamiento Edificio IV",
+        "elevadores" : false,
+        "ambulatorios" : false
     },
     {
         "nombre" : "Sótano del Centro de Congresos",
         "latitude" : 25.6486250,
         "longitude" : -100.2897816,
-        "description" : "Estacionamiento Sótano del Centro de Congresos"
+        "description" : "Estacionamiento Sótano del Centro de Congresos",
+        "elevadores" : false,
+        "ambulatorios" : false
     },
     {
         "nombre" : "El Borrego",
         "latitude" : 25.6493392,
         "longitude" : -100.2906265,
-        "description" : "Estacionamiento El Borrego"
+        "description" : "Estacionamiento El Borrego",
+        "elevadores" : false,
+        "ambulatorios" : false
     },
     {
         "nombre" : "CETEC",
         "latitude" : 25.6509824,
         "longitude" : -100.2915123,
-        "description" : "Estacionamiento CETEC"
+        "description" : "Estacionamiento CETEC",
+        "elevadores" : false,
+        "ambulatorios" : false
     },
     {
         "nombre" : "Rectoría",
         "latitude" : 25.6519254,
         "longitude" : -100.2912293,
-        "description" : "Estacionamiento Rectoría"
+        "description" : "Estacionamiento Rectoría",
+        "elevadores" : false,
+        "ambulatorios" : false
     },
     {
         "nombre" : "CEDES",
         "latitude" : 25.6546041,
         "longitude" : -100.2918874,
-        "description" : "Estacionamiento CEDES"
+        "description" : "Estacionamiento CEDES",
+        "elevadores" : false,
+        "ambulatorios" : false
     },
     {
         "nombre" : "E9",
         "latitude" : 25.6564697,
         "longitude" : -100.2919810,
-        "description" : "Estacionamiento E9 Rosales"
+        "description" : "Estacionamiento E9 Rosales",
+        "elevadores" : false,
+        "ambulatorios" : false
     },
     {
         "nombre" : "E7",
         "latitude" : 25.6545225,
         "longitude" : -100.2900635,
-        "description" : "Estacionamiento E7 Casa Naranjos"
+        "description" : "Estacionamiento E7 Casa Naranjos",
+        "elevadores" : false,
+        "ambulatorios" : false
     },
     {
         "nombre" : "E5",
         "latitude" : 25.6541555,
         "longitude" : -100.2867104,
-        "description" : "Estacionamiento E5"
+        "description" : "Estacionamiento E5",
+        "elevadores" : false,
+        "ambulatorios" : false
     },
     {
         "nombre" : "E6",
         "latitude" : 25.6545998,
         "longitude" : -100.2881702,
-        "description" : "Estacionamiento E6"
+        "description" : "Estacionamiento E6",
+        "elevadores" : false,
+        "ambulatorios" : false
     },
     {
         "nombre" : "E11",
         "latitude" : 25.6542381,
         "longitude" : -100.2843766,
-        "description" : "Estacionamiento E11"
+        "description" : "Estacionamiento E11",
+        "elevadores" : false,
+        "ambulatorios" : false
     },
     {
         "nombre" : "Edificios Norte",
         "latitude" : 25.6557165,
         "longitude" : -100.2847065,
-        "description" : "Estacionamiento Edificios Norte"
+        "description" : "Estacionamiento Edificios Norte",
+        "elevadores" : false,
+        "ambulatorios" : false
     },
     {
         "nombre" : "Edificios Norte J. Cantú Leal",
         "latitude" : 25.6557117,
         "longitude" : -100.2837198,
-        "description" : "Estacionamiento Edificios Norte J. Cantú Leal"
+        "description" : "Estacionamiento Edificios Norte J. Cantú Leal",
+        "elevadores" : false,
+        "ambulatorios" : false
     },
     {
         "nombre" : "Pabellón Tec",
         "latitude" : 25.6480229,
         "longitude" : -100.2894627,
-        "description" : "Estacionamiento Pabellón Tec"
+        "description" : "Estacionamiento Pabellón Tec",
+        "elevadores" : false,
+        "ambulatorios" : false
     },
     {
         "nombre" : "DistritoTec",
         "latitude" : 25.6513956,
         "longitude" : -100.2934223,
-        "description" : "Estacionamiento DistritoTec"
+        "description" : "Estacionamiento DistritoTec",
+        "elevadores" : false,
+        "ambulatorios" : false
     }
 ]

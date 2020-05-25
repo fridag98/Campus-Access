@@ -19,11 +19,15 @@
 		D69F0CC62443B24E00498E34 /* Otros.json in Resources */ = {isa = PBXBuildFile; fileRef = D69F0CC52443B24E00498E34 /* Otros.json */; };
 		D69F0CC82443B2D900498E34 /* Deportes.json in Resources */ = {isa = PBXBuildFile; fileRef = D69F0CC72443B2D900498E34 /* Deportes.json */; };
 		D69F0CCA2443B31800498E34 /* Zonas Comunes.json in Resources */ = {isa = PBXBuildFile; fileRef = D69F0CC92443B31800498E34 /* Zonas Comunes.json */; };
+		D6ACD6BA24771DDB0092D147 /* ListaVisitasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACD6B924771DDB0092D147 /* ListaVisitasViewController.swift */; };
+		D6ACD6BC247721840092D147 /* DetallesVisitaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACD6BB247721840092D147 /* DetallesVisitaViewController.swift */; };
 		D6B308B624412244009D4971 /* Edificios.json in Resources */ = {isa = PBXBuildFile; fileRef = D6B308B524412244009D4971 /* Edificios.json */; };
 		D6B308BA24413DD5009D4971 /* Restaurantes.json in Resources */ = {isa = PBXBuildFile; fileRef = D6B308B924413DD5009D4971 /* Restaurantes.json */; };
 		D6B308BC24413E5C009D4971 /* Lugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B308BB24413E5C009D4971 /* Lugar.swift */; };
 		D6B308BE24413F3A009D4971 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B308BD24413F3A009D4971 /* DataLoader.swift */; };
 		D6B308C0244145AF009D4971 /* DetallesLugarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B308BF244145AF009D4971 /* DetallesLugarViewController.swift */; };
+		D6B4D64924775D16003B642F /* RegistroVisitasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B4D64824775D16003B642F /* RegistroVisitasViewController.swift */; };
+		D6B4D64D2477736D003B642F /* VisitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B4D64C2477736D003B642F /* VisitModel.swift */; };
 		D6BE0D3924687B3200269A82 /* IdentificacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BE0D3824687B3200269A82 /* IdentificacionViewController.swift */; };
 		D6C919E52440023E006E3B1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C919E42440023E006E3B1E /* AppDelegate.swift */; };
 		D6C919E72440023E006E3B1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C919E62440023E006E3B1E /* SceneDelegate.swift */; };
@@ -55,11 +59,15 @@
 		D69F0CC52443B24E00498E34 /* Otros.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Otros.json; sourceTree = "<group>"; };
 		D69F0CC72443B2D900498E34 /* Deportes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Deportes.json; sourceTree = "<group>"; };
 		D69F0CC92443B31800498E34 /* Zonas Comunes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Zonas Comunes.json"; sourceTree = "<group>"; };
+		D6ACD6B924771DDB0092D147 /* ListaVisitasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaVisitasViewController.swift; sourceTree = "<group>"; };
+		D6ACD6BB247721840092D147 /* DetallesVisitaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallesVisitaViewController.swift; sourceTree = "<group>"; };
 		D6B308B524412244009D4971 /* Edificios.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Edificios.json; sourceTree = "<group>"; };
 		D6B308B924413DD5009D4971 /* Restaurantes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Restaurantes.json; sourceTree = "<group>"; };
 		D6B308BB24413E5C009D4971 /* Lugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lugar.swift; sourceTree = "<group>"; };
 		D6B308BD24413F3A009D4971 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		D6B308BF244145AF009D4971 /* DetallesLugarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallesLugarViewController.swift; sourceTree = "<group>"; };
+		D6B4D64824775D16003B642F /* RegistroVisitasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroVisitasViewController.swift; sourceTree = "<group>"; };
+		D6B4D64C2477736D003B642F /* VisitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitModel.swift; sourceTree = "<group>"; };
 		D6BE0D3824687B3200269A82 /* IdentificacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentificacionViewController.swift; sourceTree = "<group>"; };
 		D6C919E12440023E006E3B1E /* CampusAccess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusAccess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C919E42440023E006E3B1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +103,7 @@
 			children = (
 				1095EFB3246A774E00E3F65D /* UserModel.swift */,
 				9592D78524776D6100E216D6 /* EventModel.swift */,
+				D6B4D64C2477736D003B642F /* VisitModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,9 +145,12 @@
 				D6C919EA2440023E006E3B1E /* Main.storyboard */,
 				9592D78324776CFC00E216D6 /* EventosTableViewController.swift */,
 				10D1E3212479D88100C663FB /* DetalleUsuarioViewController.swift */,
+				D6ACD6BB247721840092D147 /* DetallesVisitaViewController.swift */,
+				D6ACD6B924771DDB0092D147 /* ListaVisitasViewController.swift */,
+				D6B4D64824775D16003B642F /* RegistroVisitasViewController.swift */,
 				D6CC12272461C255004F3746 /* loginControllers */,
-				D6B308BD24413F3A009D4971 /* DataLoader.swift */,
 				D6B308BB24413E5C009D4971 /* Lugar.swift */,
+				D6B308BD24413F3A009D4971 /* DataLoader.swift */,
 				D6B308BF244145AF009D4971 /* DetallesLugarViewController.swift */,
 				D6C919FA244005BB006E3B1E /* CategoriasViewController.swift */,
 				D6C919F824400305006E3B1E /* LugaresTableViewController.swift */,
@@ -339,8 +351,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6BE0D3924687B3200269A82 /* IdentificacionViewController.swift in Sources */,
+				D6B4D64924775D16003B642F /* RegistroVisitasViewController.swift in Sources */,
 				D6CC12242461C1F9004F3746 /* LoginViewController.swift in Sources */,
+				D6ACD6BC247721840092D147 /* DetallesVisitaViewController.swift in Sources */,
 				D6B308BC24413E5C009D4971 /* Lugar.swift in Sources */,
+				D6B4D64D2477736D003B642F /* VisitModel.swift in Sources */,
+				D6ACD6BA24771DDB0092D147 /* ListaVisitasViewController.swift in Sources */,
 				D6B308BE24413F3A009D4971 /* DataLoader.swift in Sources */,
 				D6DB3D922471E7D400DC671B /* Loading.swift in Sources */,
 				D6C919E52440023E006E3B1E /* AppDelegate.swift in Sources */,

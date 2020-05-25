@@ -13,4 +13,6 @@ struct Lugar: Codable {
     var latitude : Double
     var longitude : Double
     var description : String
+    var ambulatorios : Bool
+    var elevadores : Bool
 }

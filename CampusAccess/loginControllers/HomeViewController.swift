@@ -80,6 +80,22 @@ class HomeViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueVisitas" {
+            let navigationControllerView = segue.destination as! UINavigationController
+            let vistaRegistro = navigationControllerView.topViewController as! ListaVisitasViewController
+            vistaRegistro.user = self.user
+        }
+    }
+    
+    @IBAction func buttonAcceso(_ sender: UIButton) {
+        if user.isVisitor {
+            self.performSegue(withIdentifier: "segueVisitas", sender: nil)
+        } else {
+            print("segue del alumno")
+        }
+    }
+    
     func logOut() {
         do {
             try Auth.auth().signOut()

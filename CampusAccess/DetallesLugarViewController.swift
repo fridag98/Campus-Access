@@ -11,7 +11,6 @@ import CoreLocation
 import GoogleMaps
 import GoogleMapsDirections
 import Alamofire
-import SwiftyJSON
 
 class DetallesLugarViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -19,6 +18,12 @@ class DetallesLugarViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var lbDescripcion: UILabel!
     @IBOutlet weak var btNavegar: UIButton!
     @IBOutlet weak var googleMaps: GMSMapView!
+    
+    @IBOutlet weak var imgElevator: UIImageView!
+    @IBOutlet weak var imgToilet: UIImageView!
+    @IBOutlet weak var lbElevator: UILabel!
+    @IBOutlet weak var lbToilet: UILabel!
+    @IBOutlet weak var lbExtraInfo: UILabel!
     
     var lugar : Lugar!
     var longitude : Double!
@@ -32,19 +37,36 @@ class DetallesLugarViewController: UIViewController, CLLocationManagerDelegate {
         self.googleMaps?.isMyLocationEnabled = true
         self.googleMaps.camera = camera
         self.googleMaps.animate(to: camera)
-
         
-        //marker en el lugar seleccionado
+        //marker of selected place
         let destinationMarker = GMSMarker()
         destinationMarker.position = CLLocationCoordinate2D(latitude: lugar.latitude, longitude: lugar.longitude)
         destinationMarker.title = lugar.nombre
         destinationMarker.map = googleMaps
         
-        //marker temporal que simula el current location dentro del tec
+        //temporal marker simulating current location at Tec
         let sourceMarker = GMSMarker()
         sourceMarker.position = CLLocationCoordinate2D(latitude: 25.651470, longitude: -100.291025)
         sourceMarker.title = "Tu ubicacion"
         sourceMarker.map = googleMaps
+        
+        //show availability
+        if !lugar.ambulatorios {
+            imgToilet.isHidden = true
+            lbToilet.isHidden = true
+        }
+        if !lugar.elevadores {
+            imgElevator.isHidden = true
+            lbElevator.isHidden = true
+        }
+        
+        //show prompt of special elevators
+        if lugar.nombre == "Aulas 4" || lugar.nombre == "Aulas 7" {
+            lbExtraInfo.alpha = 1
+           DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+               self.lbExtraInfo.alpha = 0
+           }
+        }
         
         lbNombre.text = lugar.nombre
         lbDescripcion.text = lugar.description
@@ -57,7 +79,6 @@ class DetallesLugarViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }
-        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -94,7 +115,6 @@ class DetallesLugarViewController: UIViewController, CLLocationManagerDelegate {
         let camera = GMSCameraPosition.camera(withLatitude: 25.651470, longitude: -100.291025, zoom: 20.0)
         self.googleMaps.camera = camera
         self.googleMaps.animate(to: camera)
-        
     }
     
     @IBAction func btnDirections(_ sender: UIButton) {
@@ -112,7 +132,6 @@ class DetallesLugarViewController: UIViewController, CLLocationManagerDelegate {
                 }
             }
         }
-
     }
     
    /* func startReceivingLocationChanges() {
@@ -132,6 +151,5 @@ class DetallesLugarViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
     }*/
-
 }
 

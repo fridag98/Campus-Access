@@ -20,7 +20,7 @@ class LugaresTableViewController: UITableViewController {
         arrLugares = DataLoader(arch:categoriaSeleccionada).lugaresData
     }
 
-    // MARK: - Table view data source
+    // MARK: - Table view settings
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrLugares.count
