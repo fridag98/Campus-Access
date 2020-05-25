@@ -383,6 +383,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
+                                <connections>
+                                    <segue destination="qph-Wp-4J0" kind="presentation" id="rOE-pw-xCF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="F66-xK-aEW">
                                 <rect key="frame" x="34" y="545" width="163" height="163"/>
@@ -654,6 +657,51 @@
             </objects>
             <point key="canvasLocation" x="1981.1594202898552" y="90.401785714285708"/>
         </scene>
+        <!--Eventos-->
+        <scene sceneID="5ch-s3-qsB">
+            <objects>
+                <tableViewController id="qph-Wp-4J0" customClass="EventosTableViewController" customModule="CampusAccess" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zjK-KB-UEQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="eventoCell" textLabel="cga-1M-jgh" detailTextLabel="CRt-An-FO1" rowHeight="85" style="IBUITableViewCellStyleSubtitle" id="XbN-SH-lls">
+                                <rect key="frame" x="0.0" y="28" width="414" height="85"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XbN-SH-lls" id="5mu-u1-01j">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="85"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cga-1M-jgh">
+                                            <rect key="frame" x="20" y="22" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CRt-An-FO1">
+                                            <rect key="frame" x="20" y="45.5" width="33" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qph-Wp-4J0" id="VAx-Le-4wE"/>
+                            <outlet property="delegate" destination="qph-Wp-4J0" id="o0T-EX-WBJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Eventos" largeTitleDisplayMode="always" id="aso-2s-LW5"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U9A-Yi-fwC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1981" y="822"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="rqX-ME-OJF">
             <objects>
@@ -674,7 +722,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="b3u-Oc-l0V"/>
+        <segue reference="FOa-Q6-Qt8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="addPhoto" width="512" height="512"/>
