@@ -18,12 +18,21 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var digitalServicesButton: UIButton!
     @IBOutlet weak var expresoTecButton: UIButton!
     
+    let user : UserModel = UserModel()
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         btnLogOut.layer.cornerRadius = 25.0
-        self.navigationController?.navigationBar.isHidden = true
-        
-        let user : UserModel = UserModel()
+        // TODO: Este proceso solo ocurre cuando incia sesión, si se editan los datos esto no se actualiza
+        showSpinner()
         
         if let usr = Auth.auth().currentUser {
             user.uid = usr.uid
@@ -51,23 +60,23 @@ class HomeViewController: UIViewController {
                 guard let lastName = dataDescription?["lastname"] else { return }
                 // TODO: - Esto puede tener inconsistencias si se hace login en multiples celulares, super edge case que no creo que tenga impacto para el alcance del proyecto, pero bueno tomarlo en cuenta por si acaso
                 // TODO: Agregarlo al documento de usuario en firebase
-                guard let identificacionURL = dataDescription?["identificacionURL"] else { return }
-                let isVisitor = UserModel.isUserVisitor(fromEmail: user.email)
+                let isVisitor = UserModel.isUserVisitor(fromEmail: self.user.email)
                 
-                user.firstName = firstName as? String
-                user.lastName = lastName as? String
-                user.isVisitor = isVisitor
+                self.user.firstName = firstName as? String
+                self.user.lastName = lastName as? String
+                self.user.isVisitor = isVisitor
                 
                 //print(user)
-                if user.isVisitor {
+                if self.user.isVisitor {
                     self.accessButton.titleLabel?.lineBreakMode = .byWordWrapping;
                     self.accessButton.setTitle("ACCESO\nAL\nCAMPUS", for: .normal)
                     self.accessButton.titleLabel?.textAlignment = .center
                     self.digitalServicesButton.isHidden = true
                     self.expresoTecButton.isHidden = true
                 }
-                self.profileSettingsButton.setTitle(user.firstName.uppercased(), for: .normal)
+                self.profileSettingsButton.setTitle(self.user.firstName.uppercased(), for: .normal)
             }
+            self.removeSpinner()
         }
     }
     
@@ -103,5 +112,13 @@ class HomeViewController: UIViewController {
         UIApplication.shared.open(url)
     }
     
+//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+//        if identifier == "visitas" {
+//            if !user.isVisitor {
+//                return false
+//            }
+//        }
+//        return true
+//    }
     
 }

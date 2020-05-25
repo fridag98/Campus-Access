@@ -41,8 +41,15 @@ class IdentificacionViewController: UIViewController, UIImagePickerControllerDel
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-            let vistaSignUp = segue.destination as! SigUpViewController
-            vistaSignUp.imgIdentificacion = identificacion
+        
+        if segue.destination is SigUpViewController{
+            let vistaSiguiente = segue.destination as! SigUpViewController
+            vistaSiguiente.imgIdentificacion = identificacion
+        }
+        else if segue.destination is DetalleUsuarioViewController {
+            let vistaSiguiente = segue.destination as! DetalleUsuarioViewController
+            vistaSiguiente.imgIdentificacion = identificacion
+        }
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
