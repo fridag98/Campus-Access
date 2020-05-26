@@ -29,7 +29,8 @@ class DetalleUsuarioViewController: UIViewController {
 
         showSpinner()
         // Do any additional setup after loading the view.
-        
+        actionButton.layer.cornerRadius = 25.0
+        updatePictureButton.layer.cornerRadius = 25.0
         if let usr = Auth.auth().currentUser {
             user.uid = usr.uid
             user.email = usr.email

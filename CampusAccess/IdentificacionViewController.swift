@@ -16,18 +16,20 @@ class IdentificacionViewController: UIViewController, UIImagePickerControllerDel
     
     @IBOutlet weak var photoPlaceholder: UIButton!
     @IBOutlet weak var photoSVG: UIImageView!
-    @IBOutlet weak var btnEdit: UIButton!
-    @IBOutlet weak var btnSignUp: UIButton!
+    @IBOutlet weak var btnSaveEdit: UIButton!
+    @IBOutlet weak var btnSaveSignUp: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnSaveSignUp.layer.cornerRadius = 25.0
+        btnSaveEdit.layer.cornerRadius = 25.0
         identificacion = nil
         if(btnEditHidden) {
-            btnEdit.isHidden = true
-            btnEdit.isEnabled = false
+            btnSaveEdit.isHidden = true
+            btnSaveEdit.isEnabled = false
         } else {
-            btnSignUp.isHidden = true
-            btnSignUp.isEnabled = false
+            btnSaveSignUp.isHidden = true
+            btnSaveSignUp.isEnabled = false
         }
     }
 
@@ -53,11 +55,11 @@ class IdentificacionViewController: UIViewController, UIImagePickerControllerDel
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         
-        if (sender as! UIButton) == btnSignUp {
+        if (sender as! UIButton) == btnSaveSignUp {
             let vistaSiguiente = segue.destination as! SigUpViewController
             vistaSiguiente.imgIdentificacion = identificacion
         }
-        else if (sender as! UIButton) == btnEdit {
+        else if (sender as! UIButton) == btnSaveEdit {
             let vistaSiguiente = segue.destination as! DetalleUsuarioViewController
             vistaSiguiente.imgIdentificacion = identificacion
         }

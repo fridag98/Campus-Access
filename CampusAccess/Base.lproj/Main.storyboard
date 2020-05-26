@@ -672,8 +672,8 @@
                                     <outletCollection property="gestureRecognizers" destination="bls-bh-5wr" appends="YES" id="Vva-5N-fDF"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omq-5G-yn8">
-                                <rect key="frame" x="150" y="694" width="115" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1J-Qj-31A">
+                                <rect key="frame" x="142" y="694" width="130" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
@@ -681,7 +681,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GRZ-PB-7kF" kind="unwind" unwindAction="unwindIdentificacionToEditWithUnwindSegue:" id="72q-hs-goC"/>
+                                    <segue destination="GRZ-PB-7kF" kind="unwind" unwindAction="unwindIdentificacionWithUnwindSegue:" id="kQM-6Q-Zbe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crv-ax-ego">
@@ -700,8 +700,8 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1J-Qj-31A">
-                                <rect key="frame" x="150" y="694" width="115" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omq-5G-yn8">
+                                <rect key="frame" x="142" y="694" width="130" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
@@ -709,7 +709,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GRZ-PB-7kF" kind="unwind" unwindAction="unwindIdentificacionWithUnwindSegue:" id="kQM-6Q-Zbe"/>
+                                    <segue destination="GRZ-PB-7kF" kind="unwind" unwindAction="unwindIdentificacionToEditWithUnwindSegue:" id="72q-hs-goC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -719,8 +719,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="vL7-mJ-5h9"/>
                     <connections>
-                        <outlet property="btnEdit" destination="Omq-5G-yn8" id="sBI-gg-VMX"/>
-                        <outlet property="btnSignUp" destination="b1J-Qj-31A" id="lnU-gH-Iwh"/>
+                        <outlet property="btnSaveEdit" destination="Omq-5G-yn8" id="SdN-Sr-3HH"/>
+                        <outlet property="btnSaveSignUp" destination="b1J-Qj-31A" id="JwU-Ie-Hy1"/>
                         <outlet property="photoPlaceholder" destination="6Ha-Ms-suM" id="s2s-4s-bBI"/>
                         <outlet property="photoSVG" destination="ZfS-hY-w6s" id="EzD-y2-oL1"/>
                     </connections>
@@ -969,7 +969,7 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qrcode" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JPF-IO-aMo">
-                                <rect key="frame" x="40" y="477" width="334" height="267"/>
+                                <rect key="frame" x="40" y="513" width="334" height="267"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             </imageView>
@@ -1112,8 +1112,20 @@
                                 <rect key="frame" x="68" y="129" width="287" height="215"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hH5-Wh-D0z">
+                                <rect key="frame" x="142" y="740" width="130" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Guardar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="guardarInfo:" destination="NYO-wl-YYg" eventType="touchUpInside" id="NyG-83-Gi4"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCV-pH-W7C">
-                                <rect key="frame" x="68" y="608" width="287" height="44"/>
+                                <rect key="frame" x="64" y="606" width="295" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
@@ -1122,18 +1134,6 @@
                                 </state>
                                 <connections>
                                     <segue destination="lbx-cO-DgC" kind="show" identifier="editIden" id="pOd-B6-KEc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hH5-Wh-D0z">
-                                <rect key="frame" x="150" y="741" width="115" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Guardar">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="guardarInfo:" destination="NYO-wl-YYg" eventType="touchUpInside" id="NyG-83-Gi4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1192,7 +1192,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3f3-vh-chc"/>
+        <segue reference="pOd-B6-KEc"/>
         <segue reference="FOa-Q6-Qt8"/>
     </inferredMetricsTieBreakers>
     <resources>
