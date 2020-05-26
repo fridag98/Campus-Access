@@ -85,6 +85,10 @@ class HomeViewController: UIViewController {
             let navigationControllerView = segue.destination as! UINavigationController
             let vistaRegistro = navigationControllerView.topViewController as! ListaVisitasViewController
             vistaRegistro.user = self.user
+        }else if segue.identifier == "segueCredencial" {
+            let navigationControllerView = segue.destination as! UINavigationController
+            let vistaCredencial = navigationControllerView.topViewController as! CredencialViewController
+            vistaCredencial.user = self.user
         }
     }
     
@@ -92,7 +96,7 @@ class HomeViewController: UIViewController {
         if user.isVisitor {
             self.performSegue(withIdentifier: "segueVisitas", sender: nil)
         } else {
-            print("segue del alumno")
+            self.performSegue(withIdentifier: "segueCredencial", sender: nil)
         }
     }
     
