@@ -12,12 +12,23 @@ import UIKit
 class IdentificacionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     var identificacion : UIImage!
+    var btnEditHidden = true
+    
     @IBOutlet weak var photoPlaceholder: UIButton!
     @IBOutlet weak var photoSVG: UIImageView!
+    @IBOutlet weak var btnEdit: UIButton!
+    @IBOutlet weak var btnSignUp: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         identificacion = nil
+        if(btnEditHidden) {
+            btnEdit.isHidden = true
+            btnEdit.isEnabled = false
+        } else {
+            btnSignUp.isHidden = true
+            btnSignUp.isEnabled = false
+        }
     }
 
     //el textfield tienen un botton invisible, la cámara tienen un tap
@@ -42,11 +53,11 @@ class IdentificacionViewController: UIViewController, UIImagePickerControllerDel
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         
-        if segue.destination is SigUpViewController{
+        if (sender as! UIButton) == btnSignUp {
             let vistaSiguiente = segue.destination as! SigUpViewController
             vistaSiguiente.imgIdentificacion = identificacion
         }
-        else if segue.destination is DetalleUsuarioViewController {
+        else if (sender as! UIButton) == btnEdit {
             let vistaSiguiente = segue.destination as! DetalleUsuarioViewController
             vistaSiguiente.imgIdentificacion = identificacion
         }

@@ -700,6 +700,18 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1J-Qj-31A">
+                                <rect key="frame" x="150" y="694" width="115" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Guardar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="GRZ-PB-7kF" kind="unwind" unwindAction="unwindIdentificacionWithUnwindSegue:" id="kQM-6Q-Zbe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -707,6 +719,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="vL7-mJ-5h9"/>
                     <connections>
+                        <outlet property="btnEdit" destination="Omq-5G-yn8" id="sBI-gg-VMX"/>
+                        <outlet property="btnSignUp" destination="b1J-Qj-31A" id="lnU-gH-Iwh"/>
                         <outlet property="photoPlaceholder" destination="6Ha-Ms-suM" id="s2s-4s-bBI"/>
                         <outlet property="photoSVG" destination="ZfS-hY-w6s" id="EzD-y2-oL1"/>
                     </connections>
@@ -1107,7 +1121,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="lbx-cO-DgC" kind="show" identifier="edit" id="pOd-B6-KEc"/>
+                                    <segue destination="lbx-cO-DgC" kind="show" identifier="editIden" id="pOd-B6-KEc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hH5-Wh-D0z">
@@ -1178,7 +1192,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pOd-B6-KEc"/>
+        <segue reference="3f3-vh-chc"/>
         <segue reference="FOa-Q6-Qt8"/>
     </inferredMetricsTieBreakers>
     <resources>

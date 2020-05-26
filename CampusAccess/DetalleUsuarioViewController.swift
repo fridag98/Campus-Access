@@ -88,6 +88,12 @@ class DetalleUsuarioViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editIden" {
+            let identificacionView = segue.destination as! IdentificacionViewController
+            identificacionView.btnEditHidden = false
+        }
+    }
     
     @IBAction func unwindIdentificacionToEdit(unwindSegue : UIStoryboardSegue){
         if imgIdentificacion != nil {
