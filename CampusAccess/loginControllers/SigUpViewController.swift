@@ -128,4 +128,8 @@ class SigUpViewController: UIViewController {
         //dismiss(animated: true, completion: nil)
         navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func removeKeyboard(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
 }

@@ -21,9 +21,9 @@ class RegistroVisitasViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var tfHora: UITextField!
     @IBOutlet weak var tfResponsable: UITextField!
     
+    let (datePickerDate, hourPicker) = (UIDatePicker(), UIDatePicker())
     var delegate : administraRegistros!
     var visita : VisitModel!
-    let (datePickerDate, hourPicker) = (UIDatePicker(), UIDatePicker())
 
     override func viewDidLoad() {
         super.viewDidLoad()

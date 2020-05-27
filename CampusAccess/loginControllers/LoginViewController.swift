@@ -59,4 +59,7 @@ class LoginViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func removeKeyboard(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
 }

@@ -19,10 +19,11 @@ class ListaVisitasViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var btnAgregar: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    let db = Firestore.firestore()
     var user : UserModel!
     var arrVisitas = [VisitModel]()
-    let db = Firestore.firestore()
     var alturaCelda = 87.00
+    var imgURL : String!
     
     func dateFormatter() -> DateFormatter {
         let formatter = DateFormatter()
@@ -94,7 +95,8 @@ class ListaVisitasViewController: UIViewController, UITableViewDelegate, UITable
             let vistaDetalle = segue.destination as! DetallesVisitaViewController
             let index = tableView.indexPathForSelectedRow!
             vistaDetalle.visita = arrVisitas[index.row]
-            vistaDetalle.nombreUsuario = user.firstName + " " + user.lastName
+            vistaDetalle.user = self.user
+            vistaDetalle.imgURL = self.imgURL
         } else {
             let vistaRegistro = segue.destination as! RegistroVisitasViewController
             vistaRegistro.delegate = self

@@ -18,14 +18,44 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var digitalServicesButton: UIButton!
     @IBOutlet weak var expresoTecButton: UIButton!
     
+    let db = Firestore.firestore()
     let user : UserModel = UserModel()
+    var imgURL = String()
+    var visitor = false
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
     }
     
+    func refreshData() {
+         let docRef = db.collection("visitantes").whereField("uid", isEqualTo: user.uid ?? "")
+         docRef.getDocuments { (querySnapshot, error) in
+             if error != nil {
+                print(error!)
+                return
+             } else if querySnapshot!.documents.count != 1 {
+                print("WARNING: Hay data inconsistente")
+                return
+             }
+             else {
+                let document = querySnapshot!.documents.first
+                let dataDescription = document?.data()
+                guard let firstName = dataDescription?["firstname"] else { return }
+                guard let lastName = dataDescription?["lastname"] else { return }
+                guard let identificacionURL : String = dataDescription?["identificacionURL"] as? String else { return }
+                self.user.firstName = firstName as? String
+                self.user.lastName = lastName as? String
+                self.imgURL = identificacionURL
+                self.profileSettingsButton.setTitle(self.user.firstName.uppercased(), for: .normal)
+            }
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
+        if self.visitor { //disable when it's first launched
+            refreshData()
+        }
     }
     
     override func viewDidLoad() {
@@ -41,7 +71,6 @@ class HomeViewController: UIViewController {
             self.navigationController?.popToRootViewController(animated: true)
         }
         
-        let db = Firestore.firestore()
         let collection = UserModel.getCollection(fromEmail: user.email)
         
         let docRef = db.collection(collection).whereField("uid", isEqualTo: user.uid ?? "")
@@ -58,6 +87,8 @@ class HomeViewController: UIViewController {
                 let dataDescription = document?.data()
                 guard let firstName = dataDescription?["firstname"] else { return }
                 guard let lastName = dataDescription?["lastname"] else { return }
+                guard let identificacionURL : String = dataDescription?["identificacionURL"] as? String else { return }
+                self.imgURL = identificacionURL
                 // TODO: - Esto puede tener inconsistencias si se hace login en multiples celulares, super edge case que no creo que tenga impacto para el alcance del proyecto, pero bueno tomarlo en cuenta por si acaso
                 // TODO: Agregarlo al documento de usuario en firebase
                 let isVisitor = UserModel.isUserVisitor(fromEmail: self.user.email)
@@ -68,6 +99,7 @@ class HomeViewController: UIViewController {
                 
                 //print(user)
                 if self.user.isVisitor {
+                    self.visitor = true
                     self.accessButton.titleLabel?.lineBreakMode = .byWordWrapping;
                     self.accessButton.setTitle("ACCESO\nAL\nCAMPUS", for: .normal)
                     self.accessButton.titleLabel?.textAlignment = .center
@@ -85,10 +117,15 @@ class HomeViewController: UIViewController {
             let navigationControllerView = segue.destination as! UINavigationController
             let vistaRegistro = navigationControllerView.topViewController as! ListaVisitasViewController
             vistaRegistro.user = self.user
-        }else if segue.identifier == "segueCredencial" {
+            vistaRegistro.imgURL = self.imgURL
+        } else if segue.identifier == "segueCredencial" {
             let navigationControllerView = segue.destination as! UINavigationController
             let vistaCredencial = navigationControllerView.topViewController as! CredencialViewController
             vistaCredencial.user = self.user
+            vistaCredencial.imgURL = self.imgURL
+        } else if segue.identifier == "segueDetallesUsuario" {
+            let vistaDetalles = segue.destination as! DetalleUsuarioViewController
+            vistaDetalles.user = self.user
         }
     }
     
@@ -104,13 +141,6 @@ class HomeViewController: UIViewController {
         do {
             try Auth.auth().signOut()
             self.navigationController?.popToRootViewController(animated: true)
-            /*
-               let storyboard = UIStoryboard(name: "Main", bundle: nil)
-               let IntroVC = storyboard.instantiateViewController(withIdentifier: "IntroVC") as! introVC
-               let appDelegate = UIApplication.shared.delegate as! AppDelegate
-               appDelegate.window?.rootViewController = IntroVC
-             */
-
            }
            catch let error as NSError {
                print(error.localizedDescription)
@@ -131,14 +161,4 @@ class HomeViewController: UIViewController {
         guard let url = URL(string: "https://apps.powerapps.com/play/c69d30b8-398b-451e-8423-865c73116d6e?tenantId=c65a3ea6-0f7c-400b-8934-5a6dc1705645") else { return }
         UIApplication.shared.open(url)
     }
-    
-//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-//        if identifier == "visitas" {
-//            if !user.isVisitor {
-//                return false
-//            }
-//        }
-//        return true
-//    }
-    
 }

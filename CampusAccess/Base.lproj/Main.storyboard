@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TIS-1r-Quf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TIS-1r-Quf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -382,6 +382,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="rru-Ul-cNm" firstAttribute="leading" secondItem="dND-7R-dAP" secondAttribute="leading" constant="40" id="TXL-Yf-Ohs"/>
                             <constraint firstItem="m1g-b4-Gs6" firstAttribute="leading" secondItem="dND-7R-dAP" secondAttribute="leading" constant="40" id="WQe-iA-29u"/>
@@ -391,6 +392,9 @@
                             <constraint firstItem="dND-7R-dAP" firstAttribute="trailing" secondItem="rru-Ul-cNm" secondAttribute="trailing" constant="40" id="pu7-yM-8jS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dND-7R-dAP"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="fJe-h6-wGn" appends="YES" id="zgY-IH-5r0"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="cQ9-oT-rJg">
                         <barButtonItem key="backBarButtonItem" title="Regresar" id="Dkv-ok-j7T"/>
@@ -409,6 +413,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bc-yh-zxr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fJe-h6-wGn">
+                    <connections>
+                        <action selector="removeKeyboard:" destination="f47-Gc-vYe" id="zQK-kA-xxx"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1977" y="459"/>
         </scene>
@@ -429,7 +438,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NYO-wl-YYg" kind="show" id="CZ6-vS-rWF"/>
+                                    <segue destination="NYO-wl-YYg" kind="show" identifier="segueDetallesUsuario" id="CZ6-vS-rWF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJ0-Fc-VVl">
@@ -512,7 +521,9 @@
                         <color key="backgroundColor" red="0.80827279119999995" green="0.80827279119999995" blue="0.80827279119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="nmW-8z-evG"/>
                     </view>
-                    <navigationItem key="navigationItem" id="juj-qD-lOi"/>
+                    <navigationItem key="navigationItem" id="juj-qD-lOi">
+                        <barButtonItem key="backBarButtonItem" title="Regresar" id="16Z-RK-gun"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="accessButton" destination="CJ0-Fc-VVl" id="Kwa-dV-g9g"/>
                         <outlet property="btnLogOut" destination="efj-6y-ghg" id="Ifw-1I-qUQ"/>
@@ -607,6 +618,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="WtO-n8-WFf" firstAttribute="top" secondItem="Tix-Cl-sON" secondAttribute="bottom" constant="30" id="0g6-6t-XTc"/>
                             <constraint firstItem="WtO-n8-WFf" firstAttribute="leading" secondItem="x0h-JO-YbP" secondAttribute="leading" constant="40" id="21V-Gx-0DZ"/>
@@ -625,6 +637,9 @@
                             <constraint firstItem="NXV-xr-AwM" firstAttribute="leading" secondItem="x0h-JO-YbP" secondAttribute="leading" constant="40" id="rNs-ua-3G0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x0h-JO-YbP"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="dHN-oj-ZXL" appends="YES" id="wch-fE-FTf"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="b2e-DA-v2K">
                         <barButtonItem key="backBarButtonItem" title="Regresar" id="Dbf-Xn-Sb1"/>
@@ -645,6 +660,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1K-j9-QO1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dHN-oj-ZXL">
+                    <connections>
+                        <action selector="removeKeyboard:" destination="uDn-dZ-ug8" id="WdK-tO-NIf"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1978" y="-310"/>
         </scene>
@@ -1026,29 +1046,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="eventoCell" textLabel="cga-1M-jgh" detailTextLabel="CRt-An-FO1" rowHeight="85" style="IBUITableViewCellStyleSubtitle" id="XbN-SH-lls">
-                                <rect key="frame" x="0.0" y="28" width="414" height="85"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="eventoCell" rowHeight="132" id="XbN-SH-lls" customClass="CustomEventTableViewCell" customModule="CampusAccess" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="132"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XbN-SH-lls" id="5mu-u1-01j">
-                                    <rect key="frame" x="0.0" y="0.0" width="383" height="85"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="132"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cga-1M-jgh">
-                                            <rect key="frame" x="20" y="22" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombe de evento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pA6-bY-jO8">
+                                            <rect key="frame" x="20" y="11" width="363" height="36"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CRt-An-FO1">
-                                            <rect key="frame" x="20" y="45.5" width="33" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripcion" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3E-1L-gvm">
+                                            <rect key="frame" x="20" y="55" width="355" height="64"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lbDescripcion" destination="Q3E-1L-gvm" id="h2n-N7-NZz"/>
+                                    <outlet property="lbNombreEvento" destination="pA6-bY-jO8" id="Nre-h9-5hz"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1060,7 +1084,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U9A-Yi-fwC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="638" y="975"/>
+            <point key="canvasLocation" x="637.68115942028987" y="975"/>
         </scene>
         <!--Detalle Usuario View Controller-->
         <scene sceneID="QQU-IL-XaA">
@@ -1141,7 +1165,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="VNq-Nj-uGh"/>
                     </view>
-                    <navigationItem key="navigationItem" id="FPp-ge-c5q"/>
+                    <navigationItem key="navigationItem" id="FPp-ge-c5q">
+                        <barButtonItem key="backBarButtonItem" title="Regresar" id="Q60-2X-KJS"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="actionButton" destination="hH5-Wh-D0z" id="eN7-2o-V35"/>
                         <outlet property="profilePicture" destination="qq6-AG-BvU" id="5bi-c6-NDz"/>
@@ -1182,7 +1208,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre de Usuario" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOb-RR-G4e">
-                                <rect key="frame" x="20" y="269" width="374" height="30"/>
+                                <rect key="frame" x="20" y="160" width="374" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -1194,7 +1220,7 @@
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Matricula" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7z-cD-Hz9">
-                                <rect key="frame" x="20" y="307" width="374" height="32"/>
+                                <rect key="frame" x="20" y="289" width="374" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
@@ -1260,7 +1286,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pOd-B6-KEc"/>
+        <segue reference="3f3-vh-chc"/>
         <segue reference="FOa-Q6-Qt8"/>
     </inferredMetricsTieBreakers>
     <resources>

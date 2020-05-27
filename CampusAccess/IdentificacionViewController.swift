@@ -54,7 +54,6 @@ class IdentificacionViewController: UIViewController, UIImagePickerControllerDel
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        
         if (sender as! UIButton) == btnSaveSignUp {
             let vistaSiguiente = segue.destination as! SigUpViewController
             vistaSiguiente.imgIdentificacion = identificacion
@@ -74,5 +73,4 @@ class IdentificacionViewController: UIViewController, UIImagePickerControllerDel
         }
         return true
     }
-
 }

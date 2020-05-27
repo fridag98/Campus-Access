@@ -19,26 +19,17 @@ class DetalleUsuarioViewController: UIViewController {
     @IBOutlet weak var actionButton: UIButton!
     
     var imgIdentificacion : UIImage!
-
-    let user : UserModel = UserModel()
-    
+    var user : UserModel!
     var document : DocumentSnapshot?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         showSpinner()
-        // Do any additional setup after loading the view.
         actionButton.layer.cornerRadius = 25.0
         updatePictureButton.layer.cornerRadius = 25.0
-        if let usr = Auth.auth().currentUser {
-            user.uid = usr.uid
-            user.email = usr.email
-        } else {
-            self.navigationController?.popToRootViewController(animated: true)
-        }
-       
         let db = Firestore.firestore()
+
         let collection = UserModel.getCollection(fromEmail: user.email)
        
         let docRef = db.collection(collection).whereField("uid", isEqualTo: user.uid ?? "")
@@ -53,24 +44,12 @@ class DetalleUsuarioViewController: UIViewController {
             else {
                 self.document = querySnapshot!.documents.first
                 let dataDescription = self.document?.data()
-                guard let firstName = dataDescription?["firstname"] else { return }
-                guard let lastName = dataDescription?["lastname"] else { return }
-                // TODO: - Esto puede tener inconsistencias si se hace login en multiples celulares, super edge case que no creo que tenga impacto para el alcance del proyecto, pero bueno tomarlo en cuenta por si acaso
-                // TODO: Agregarlo al documento de usuario en firebase
                 guard let identificacionURL : String = dataDescription?["identificacionURL"] as? String else { return }
 
-                let isVisitor = UserModel.isUserVisitor(fromEmail: self.user.email)
-                print(identificacionURL)
                 let url = NSURL(string: identificacionURL)! as URL
-                print(url)
                 if let imageData: NSData = NSData(contentsOf: url) {
                     self.user.profilePictue = UIImage(data: imageData as Data)
                 }
-               
-                
-                self.user.firstName = firstName as? String
-                self.user.lastName = lastName as? String
-                self.user.isVisitor = isVisitor
                 
                 self.tfName.text = self.user.firstName
                 self.tfLastName.text = self.user.lastName
@@ -100,7 +79,6 @@ class DetalleUsuarioViewController: UIViewController {
         if imgIdentificacion != nil {
             profilePicture.image = imgIdentificacion
         }
-        
     }
 
     @IBAction func guardarInfo(_ sender: UIButton) {
@@ -112,15 +90,13 @@ class DetalleUsuarioViewController: UIViewController {
             showError("No puede haber campos vacios")
             return
         }
-        
-        showSpinner()
         let db = Firestore.firestore()
         
+        showSpinner()
         if (imgIdentificacion != nil) {
             guard let imageData = imgIdentificacion.jpegData(compressionQuality: 0.4) else {
                 return
             }
-                    
             let storageRef = Storage.storage().reference(forURL: "gs://campusaccess-863ef.appspot.com")
             let storageIdenRef = storageRef.child("identificacion").child(user.uid)
                                
@@ -135,7 +111,6 @@ class DetalleUsuarioViewController: UIViewController {
                 storageIdenRef.downloadURL(completion: {(url, error) in
                     var identificacionURL : String?
                     if let metaImageUrl = url?.absoluteString {
-                        //print(metaImageUrl)
                         identificacionURL = metaImageUrl
                     }
                     let collection = UserModel.getCollection(fromEmail: self.user.email)
@@ -166,29 +141,7 @@ class DetalleUsuarioViewController: UIViewController {
                 self.navigationController?.popViewController(animated: true)
             }
         }
-//        if user.isVisitor {
-//            let ref = Firestore.firestore().collection("visitantes").document(self.document!.documentID).updateData([
-//                "firstname" : self.user.firstName
-//                "lastName" : self.u
-//            ]) { (Error?) in
-//
-//            }
-//
-//            dbObject = ref.child("visitantes/")
-//        }
-        
-    
-        
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     func showError(_ message:String){
         let alert = UIAlertController(title: "Campus Access", message: message, preferredStyle: .alert)
