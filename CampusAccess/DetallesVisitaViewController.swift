@@ -19,6 +19,7 @@ class DetallesVisitaViewController: UIViewController {
     
     var visita: VisitModel!
     var nombreUsuario : String!
+    var user : UserModel!
 
     //display visit's information on specific format
     override func viewDidLoad() {
@@ -43,7 +44,7 @@ class DetallesVisitaViewController: UIViewController {
         
         lbMotivo.text = visita.motive
         
-        let infoQR = "\(nombreUsuario!)\n\(lbFecha.text!)\n\(lbHora.text!)\n\(visita.motive!)"
+        let infoQR = user.email!
         
         imgQR.image = generateQRCode(from: infoQR)
     }

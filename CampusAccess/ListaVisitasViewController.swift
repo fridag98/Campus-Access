@@ -95,6 +95,7 @@ class ListaVisitasViewController: UIViewController, UITableViewDelegate, UITable
             let index = tableView.indexPathForSelectedRow!
             vistaDetalle.visita = arrVisitas[index.row]
             vistaDetalle.nombreUsuario = user.firstName + " " + user.lastName
+            vistaDetalle.user = user
         } else {
             let vistaRegistro = segue.destination as! RegistroVisitasViewController
             vistaRegistro.delegate = self
