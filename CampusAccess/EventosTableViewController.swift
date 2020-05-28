@@ -17,6 +17,14 @@ class EventosTableViewController: UITableViewController {
     
     var listaEventos : [EventModel]!
     var alturaCelda = 132.00
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = false
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

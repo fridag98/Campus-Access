@@ -81,6 +81,15 @@ class ListaVisitasViewController: UIViewController, UITableViewDelegate, UITable
         let formatter = dateFormatter()
         formatter.timeStyle = .none
         celda.lbFecha.text = formatter.string(from: arrVisitas[indexPath.row].date)
+        
+        let today = Calendar.current.startOfDay(for: Date())
+        let dayOfVisit = Calendar.current.startOfDay(for: arrVisitas[indexPath.row].date)
+        
+        print(today)
+        print(dayOfVisit)
+        if dayOfVisit < today {
+            celda.lbRegistro.textColor = .red
+        }
 
         return celda
     }
