@@ -1,0 +1,43 @@
+[
+    {
+        "nombre" : "Estadio Borregos",
+        "latitude" : 25.653692,
+        "longitude" : -100.285344,
+        "description" : "Estadio del Campus Monterrey",
+        "elevadores" : false,
+        "ambulatorios" : false
+    },
+    {
+        "nombre" : "Domo Acuático",
+        "latitude" : 25.651345,
+        "longitude" : -100.288656,
+        "description" : "Domo Acuático Borregos",
+        "elevadores" : false,
+        "ambulatorios" : false
+    },
+    {
+        "nombre" : "Arena Borregos",
+        "latitude" : 25.650732,
+        "longitude" : -100.287439,
+        "description" : "Gimnasio Tec de Monterrey",
+        "elevadores" : false,
+        "ambulatorios" : false
+    },
+    {
+        "nombre" : "Gym",
+        "latitude" : 25.648936,
+        "longitude" : -100.290120,
+        "description" : "Ubicado al fondo de la cafetería Jubileo",
+        "elevadores" : false,
+        "ambulatorios" : false
+    },
+    {
+        "nombre" : "Centro Deportivo Borregos I",
+        "latitude" : 25.650404,
+        "longitude" : -100.286527,
+        "description" : "Canchas de Tenis y Basketball",
+        "elevadores" : false,
+        "ambulatorios" : false
+    }
+]
+

@@ -1,0 +1,18 @@
+[
+    {
+      "nombre" : "Centrales",
+      "latitude" : 25.651506,
+      "longitude" : -100.289047,
+      "description" : "Cafetería Centrales",
+      "elevadores" : false,
+      "ambulatorios" : false
+    },
+    {
+      "nombre" : "Jubileo",
+      "latitude" : 25.648937,
+      "longitude" : -100.290267,
+      "description" : "Cafetería Jubileo",
+      "elevadores" : false,
+      "ambulatorios" : false
+    }
+]

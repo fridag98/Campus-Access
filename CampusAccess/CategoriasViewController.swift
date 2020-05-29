@@ -14,7 +14,7 @@ class CategoriasViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var mapaTec: MKMapView!
     @IBOutlet weak var categoryTableView: UITableView!
     
-    let categorias = ["Edificios","Restaurantes","Cafeterías","Zonas Comunes","Deportes","Baños","Estacionamientos","Accesos","Otros"]
+    let categorias = ["Edificios","Restaurantes","Cafeterías","Zonas Comunes","Deportes","Estacionamientos","Accesos","Otros"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +27,6 @@ class CategoriasViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let region = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
         mapaTec.setRegion(region, animated: true)
-        
-        //cambiar nombre del botón de navegación a "Regresar"
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Regresar", style: .plain, target: nil, action: nil)
     }
     
     // MARK: - Navigation
@@ -47,10 +44,13 @@ class CategoriasViewController: UIViewController, UITableViewDelegate, UITableVi
      }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vistaLugares = segue.destination as! LugaresTableViewController
+        let navigationControllerView = segue.destination as! UINavigationController
+        let vistaLugares = navigationControllerView.topViewController as! LugaresTableViewController
         let indice = categoryTableView.indexPathForSelectedRow!
         vistaLugares.categoriaSeleccionada = categorias[indice.row]
     }
     
-    
+    @IBAction func btnRegresar(_ sender: Any) {
+      dismiss(animated: true, completion: nil)
+    }
 }

@@ -1,0 +1,32 @@
+[
+    {
+        "name" : "EmpleaTec",
+        "desc" : "Evento de reclutamiento para alumnos del Tec de Monterrey",
+        "url" : "https://cvc.itesm.mx/empleatec/"
+    },
+    {
+        "name" : "INC Monterrey",
+        "desc" : "Evento dedicado al emprendimiento con invitados especiales",
+        "url" : "https://incmty.com"
+    },
+    {
+        "name" : "HackMTY",
+        "desc" : "Uno de los hackatones más grandes de Latinoamérica para estudiantes",
+        "url" : "https://www.hackmty.com"
+    },
+    {
+        "name" : "Por Siempre Tec",
+        "desc" : "Eventos relacionados con graduaciones, como la firma de títulos, ceremonia de graduación, etc.",
+        "url" : "https://porsiempretec.mty.itesm.mx/index.html"
+    },
+    {
+        "name" : "CIIE",
+        "desc" : "Congreso Internacional de Innovación Educativa",
+        "url" : "https://ciie.itesm.mx/es/"
+    },
+    {
+        "name" : "HiTec",
+        "desc" : "Evento de bienvenida a alumnos del campus Monterrey",
+        "url" : "https://hitec.mty.itesm.mx"
+    },
+]
