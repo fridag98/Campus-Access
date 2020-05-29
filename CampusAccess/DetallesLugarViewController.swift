@@ -12,7 +12,7 @@ import GoogleMaps
 import GoogleMapsDirections
 import Alamofire
 
-class DetallesLugarViewController: UIViewController, CLLocationManagerDelegate {
+class DetallesLugarViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
     
     @IBOutlet weak var lbNombre: UILabel!
     @IBOutlet weak var lbDescripcion: UILabel!
@@ -37,6 +37,7 @@ class DetallesLugarViewController: UIViewController, CLLocationManagerDelegate {
         self.googleMaps?.isMyLocationEnabled = true
         self.googleMaps.camera = camera
         self.googleMaps.animate(to: camera)
+        self.googleMaps.delegate = self
         
         //marker of selected place
         let destinationMarker = GMSMarker()
