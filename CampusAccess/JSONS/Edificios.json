@@ -83,7 +83,7 @@
        "nombre" : "CETEC Torre Sur",
        "latitude" : 25.650395,
        "longitude" : -100.290978,
-       "description" : "Centro de Electrónica y Telecomunicaciones, Investigación en informática y Sistemas de Conocimiento",
+       "description" : "Centro de Electrónica y Telecomunicaciones, Investigación y Sistemas de Conocimiento",
        "elevadores" : true,
        "ambulatorios" : false
      },
@@ -91,7 +91,7 @@
        "nombre" : "CETEC Torre Norte",
        "latitude" : 25.650459,
        "longitude" : -100.290952,
-       "description" : "Centro de Electrónica y Telecomunicaciones, Investigación en informática y Sistemas de Conocimiento",
+       "description" : "Centro de Electrónica y Telecomunicaciones, Investigación y Sistemas de Conocimiento",
        "elevadores" : true,
        "ambulatorios" : false
      },
