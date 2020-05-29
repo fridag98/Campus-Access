@@ -690,11 +690,8 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1J-Qj-31A">
-                                <rect key="frame" x="142" y="583" width="130" height="44"/>
+                                <rect key="frame" x="40" y="583" width="295" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="31p-7W-WFW"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Guardar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -718,7 +715,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omq-5G-yn8">
-                                <rect key="frame" x="142" y="583" width="91" height="44"/>
+                                <rect key="frame" x="40" y="583" width="295" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Guardar">
@@ -734,16 +731,17 @@
                         <constraints>
                             <constraint firstItem="K5B-6e-827" firstAttribute="bottom" secondItem="b1J-Qj-31A" secondAttribute="bottom" constant="40" id="6bx-7j-ltV"/>
                             <constraint firstItem="b1J-Qj-31A" firstAttribute="centerX" secondItem="VVy-WU-xuk" secondAttribute="centerX" id="A3Q-49-dlE"/>
+                            <constraint firstItem="Omq-5G-yn8" firstAttribute="leading" secondItem="K5B-6e-827" secondAttribute="leading" constant="40" id="B3l-fa-JLz"/>
                             <constraint firstItem="K5B-6e-827" firstAttribute="trailing" secondItem="Crv-ax-ego" secondAttribute="trailing" constant="30" id="MwR-ue-3oj"/>
                             <constraint firstItem="Crv-ax-ego" firstAttribute="top" secondItem="AQ5-7t-IXd" secondAttribute="bottom" constant="25" id="NpR-Q3-cRa"/>
                             <constraint firstItem="AQ5-7t-IXd" firstAttribute="top" secondItem="P59-D3-Lhv" secondAttribute="bottom" constant="20" id="Pad-4P-Qfq"/>
                             <constraint firstItem="P59-D3-Lhv" firstAttribute="centerX" secondItem="VVy-WU-xuk" secondAttribute="centerX" id="Uwd-RY-J6Q"/>
                             <constraint firstItem="P59-D3-Lhv" firstAttribute="top" secondItem="K5B-6e-827" secondAttribute="top" constant="20" id="VS1-Pb-Yec"/>
-                            <constraint firstItem="b1J-Qj-31A" firstAttribute="leading" secondItem="K5B-6e-827" secondAttribute="leading" constant="142" id="XUf-Ky-VyG"/>
                             <constraint firstItem="Omq-5G-yn8" firstAttribute="centerX" secondItem="VVy-WU-xuk" secondAttribute="centerX" id="Xc8-Yy-4Z7"/>
                             <constraint firstItem="K5B-6e-827" firstAttribute="trailing" secondItem="AQ5-7t-IXd" secondAttribute="trailing" constant="144" id="jfx-fW-Sob"/>
                             <constraint firstItem="K5B-6e-827" firstAttribute="bottom" secondItem="Omq-5G-yn8" secondAttribute="bottom" constant="40" id="kL6-re-F0i"/>
                             <constraint firstItem="AQ5-7t-IXd" firstAttribute="leading" secondItem="K5B-6e-827" secondAttribute="leading" constant="30" id="m8Z-lW-mAd"/>
+                            <constraint firstItem="b1J-Qj-31A" firstAttribute="leading" secondItem="K5B-6e-827" secondAttribute="leading" constant="40" id="tZg-t3-8qS"/>
                             <constraint firstItem="Crv-ax-ego" firstAttribute="leading" secondItem="K5B-6e-827" secondAttribute="leading" constant="30" id="und-He-pvS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="K5B-6e-827"/>
