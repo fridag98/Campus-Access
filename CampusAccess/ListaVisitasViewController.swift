@@ -85,10 +85,11 @@ class ListaVisitasViewController: UIViewController, UITableViewDelegate, UITable
         let today = Calendar.current.startOfDay(for: Date())
         let dayOfVisit = Calendar.current.startOfDay(for: arrVisitas[indexPath.row].date)
         
-        print(today)
-        print(dayOfVisit)
         if dayOfVisit < today {
             celda.lbRegistro.textColor = .red
+        }
+        else {
+            celda.lbRegistro.textColor = .black
         }
 
         return celda
