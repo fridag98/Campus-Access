@@ -663,7 +663,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P59-D3-Lhv">
-                                <rect key="frame" x="1070.5" y="64" width="228" height="228"/>
+                                <rect key="frame" x="73.5" y="64" width="228" height="228"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ha-Ms-suM">
                                         <rect key="frame" x="0.0" y="0.0" width="228" height="228"/>
@@ -704,7 +704,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crv-ax-ego">
-                                <rect key="frame" x="30" y="374" width="2308.5" height="48"/>
+                                <rect key="frame" x="30" y="374" width="315" height="215"/>
                                 <string key="text">Campus Access, como medida de seguridad, requiere que suba una fotografía de su identificación para mostrarla al momento de ingresar al campus. Dicha identificación puede ser su INE, pasaporte o cédula profesional. Esta información solo será utilizada para este fin. 
 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -712,13 +712,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aviso Legal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQ5-7t-IXd">
-                                <rect key="frame" x="30" y="312" width="2194.5" height="37"/>
+                                <rect key="frame" x="30" y="312" width="201" height="37"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omq-5G-yn8">
-                                <rect key="frame" x="1139" y="583" width="91" height="44"/>
+                                <rect key="frame" x="142" y="583" width="91" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Guardar">
@@ -915,7 +915,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGY-UU-oFw">
-                                <rect key="frame" x="120" y="564" width="135" height="50"/>
+                                <rect key="frame" x="100" y="564" width="175" height="50"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Nmi-zI-F8k"/>
@@ -931,10 +931,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="PxY-ke-zBs" firstAttribute="trailing" secondItem="BzZ-Yh-KXQ" secondAttribute="trailing" constant="40" id="3V4-rh-taW"/>
-                            <constraint firstItem="EGY-UU-oFw" firstAttribute="leading" secondItem="PxY-ke-zBs" secondAttribute="leading" constant="120" id="6uF-86-gn8"/>
+                            <constraint firstItem="EGY-UU-oFw" firstAttribute="leading" secondItem="PxY-ke-zBs" secondAttribute="leading" constant="100" id="6uF-86-gn8"/>
                             <constraint firstItem="EGY-UU-oFw" firstAttribute="top" secondItem="BzZ-Yh-KXQ" secondAttribute="bottom" constant="70" id="AQO-KH-msb"/>
                             <constraint firstItem="BzZ-Yh-KXQ" firstAttribute="top" secondItem="PxY-ke-zBs" secondAttribute="top" constant="120" id="QRg-P8-Ns1"/>
-                            <constraint firstItem="PxY-ke-zBs" firstAttribute="trailing" secondItem="EGY-UU-oFw" secondAttribute="trailing" constant="120" id="trM-GE-R62"/>
+                            <constraint firstItem="PxY-ke-zBs" firstAttribute="trailing" secondItem="EGY-UU-oFw" secondAttribute="trailing" constant="100" id="trM-GE-R62"/>
                             <constraint firstItem="BzZ-Yh-KXQ" firstAttribute="leading" secondItem="PxY-ke-zBs" secondAttribute="leading" constant="40" id="x3Z-dp-eaY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PxY-ke-zBs"/>
