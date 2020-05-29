@@ -309,12 +309,37 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChY-On-MhG">
+                                <rect key="frame" x="60" y="51" width="255" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="RTm-za-aS0"/>
+                                </constraints>
+                                <string key="text">Campus Access fue desarrollado como proyecto final de la materia Proyecto de Desarrollo para Dispositivos Móviles en el semestre Febrero Junio 2020.</string>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desarrolladores:  Iñaki Janeiro, Frida Gutiérrez, Rigoberto Valadez" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC0-Fa-Xs5">
+                                <rect key="frame" x="50" y="105" width="275" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="mpr-uH-aUZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="wx1-wC-MZY" firstAttribute="bottom" secondItem="Bnr-cy-abh" secondAttribute="bottom" constant="40" id="02l-2j-tQl"/>
                             <constraint firstItem="wx1-wC-MZY" firstAttribute="trailing" secondItem="Bnr-cy-abh" secondAttribute="trailing" constant="40" id="22i-Tc-nyN"/>
+                            <constraint firstItem="bC0-Fa-Xs5" firstAttribute="top" secondItem="ChY-On-MhG" secondAttribute="bottom" constant="2" id="8GN-va-6s5"/>
+                            <constraint firstItem="wx1-wC-MZY" firstAttribute="trailing" secondItem="bC0-Fa-Xs5" secondAttribute="trailing" constant="50" id="CKa-NV-SjN"/>
                             <constraint firstItem="Bnr-cy-abh" firstAttribute="leading" secondItem="wx1-wC-MZY" secondAttribute="leading" constant="40" id="EMb-8g-sIl"/>
+                            <constraint firstItem="wx1-wC-MZY" firstAttribute="trailing" secondItem="ChY-On-MhG" secondAttribute="trailing" constant="60" id="EqT-YD-Q4W"/>
+                            <constraint firstItem="ChY-On-MhG" firstAttribute="leading" secondItem="wx1-wC-MZY" secondAttribute="leading" constant="60" id="V8O-AU-tDB"/>
+                            <constraint firstItem="ChY-On-MhG" firstAttribute="top" secondItem="wx1-wC-MZY" secondAttribute="top" constant="7" id="WQh-jz-BqB"/>
+                            <constraint firstItem="bC0-Fa-Xs5" firstAttribute="leading" secondItem="wx1-wC-MZY" secondAttribute="leading" constant="50" id="nfP-cF-8xY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wx1-wC-MZY"/>
                     </view>
@@ -326,7 +351,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3H5-QL-MZ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2937.68115942029" y="89.732142857142847"/>
+            <point key="canvasLocation" x="-2939.130434782609" y="89.0625"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="MAR-Px-45S">
